@@ -26,6 +26,7 @@
   .meta { display:flex; gap:8px; align-items:center; font-size:.75rem; color:var(--muted); }
   .type { font-weight:600; text-transform:uppercase; letter-spacing:.05em; }
   .dist { font-size:.72rem; color:var(--muted); }
+  .flag { color:#8a2c2c; background:#fde3e3; border:1px solid #e9b0b0; border-radius:999px; padding:1px 7px; font-size:.7rem; font-weight:600; }
   .michelin { color:#8a6d00; background:#fff4c2; border:1px solid #e6d27a; border-radius:999px; padding:1px 7px; font-size:.7rem; font-weight:600; }
   .status { margin-left:auto; border:1px solid var(--line); border-radius:999px; padding:1px 8px; }
   h3 { margin:6px 0 2px; font-size:1.05rem; }
@@ -40,6 +41,7 @@
   .notes { font-size:.85rem; margin:8px 0 0; }
   .cost { font-size:.85rem; color:var(--muted); margin-top:6px; }
   .empty { color:var(--muted); text-align:center; padding:40px 0; }
+  .photo { width:100%; max-height:220px; object-fit:cover; border-radius:10px; margin-top:10px; display:block; background:rgba(127,127,127,.08); }
 </style>
 </head>
 <body>
@@ -50,51 +52,172 @@
 </header>
 <div class="filters" id="f"><button class="on" data-filter="">All</button><button data-filter="Event">Event</button><button data-filter="Nearby">Nearby</button><button data-filter="Food">Food</button><button id="near" type="button">Near me</button></div>
 <main id="list"><section id="nearby" hidden><h2 class="near-heading">Nearest first</h2><div id="nearby-list"></div></section><section class="day"><h2>Guangzhou</h2>
-        <article class="card food" data-type="Food" data-lat="23.108071" data-lng="113.259578" data-search="wisca (binjiang) 惠食佳（滨江大公馆店） haizhu guangzhou long waits at peak. claypot eel; salt-and-pepper mantis shrimp">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="wisca (binjiang) 惠食佳（滨江大公馆店） haizhu guangzhou long waits at peak. claypot eel; salt-and-pepper mantis shrimp">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Wisca (Binjiang)</h3>
           <div class="zh-title">惠食佳（滨江大公馆店）</div>
           <div class="where">Haizhu · Guangzhou</div>
           <div class="addr"><div class="zh">滨江西路172号</div><div class="en">172 Binjiang West Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=113.259578,23.108071&amp;name=Wisca%20%28Binjiang%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/517411" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%83%A0%E9%A3%9F%E4%BD%B3%EF%BC%88%E6%BB%A8%E6%B1%9F%E5%A4%A7%E5%85%AC%E9%A6%86%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/517411" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%83%A0%E9%A3%9F%E4%BD%B3%EF%BC%88%E6%BB%A8%E6%B1%9F%E5%A4%A7%E5%85%AC%E9%A6%86%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Claypot eel; salt-and-pepper mantis shrimp</p>
           <p class="notes">Long waits at peak.</p>
           <div class="cost">~¥180 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="23.107810" data-lng="113.244450" data-search="hongtu hall (white swan hotel) 宏图府（白天鹅宾馆） liwan guangzhou always busy. har gow; shrimp shaomai">
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="yoma space (pazhou) 有马空间 haizhu / pazhou guangzhou ig reel · @ abigailchin.co · high confidence — 24-hr luxury spa; unlimited caviar, king crab, lobster and oysters at premium dinner buffet (+~¥200-299), plus baths, cinema, games, overnight pods. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>YOMA Space (Pazhou)</h3>
+          <div class="zh-title">有马空间</div>
+          <div class="where">Haizhu / Pazhou · Guangzhou</div>
+          <div class="addr"><div class="zh">海珠区新港东路618号南丰汇2楼</div><div class="en">2/F, Nan Fung Place, 618 Xingang East Rd, Haizhu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.356915,23.097789&amp;name=YOMA%20Space%20%28Pazhou%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%9C%89%E9%A9%AC%E7%A9%BA%E9%97%B4" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DODxWokkzNt/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ abigailchin.co · high confidence — 24-hr luxury spa; unlimited caviar, king crab, lobster and oysters at premium dinner buffet (+~¥200-299), plus baths, cinema, games, overnight pods.</p>
+          <div class="cost">¥599 12-hr / ¥799 24-hr pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="hongtu hall (white swan hotel) 宏图府（白天鹅宾馆） liwan guangzhou always busy. har gow; shrimp shaomai">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Hongtu Hall (White Swan Hotel)</h3>
           <div class="zh-title">宏图府（白天鹅宾馆）</div>
           <div class="where">Liwan · Guangzhou</div>
           <div class="addr"><div class="zh">沙面岛白天鹅宾馆2楼</div><div class="en">2F White Swan Hotel, Shamian Island</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=113.24445,23.10781&amp;name=Hongtu%20Hall%20%28White%20Swan%20Hotel%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%AE%8F%E5%9B%BE%E5%BA%9C%EF%BC%88%E7%99%BD%E5%A4%A9%E9%B9%85%E5%AE%BE%E9%A6%86%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%AE%8F%E5%9B%BE%E5%BA%9C%EF%BC%88%E7%99%BD%E5%A4%A9%E9%B9%85%E5%AE%BE%E9%A6%86%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Har gow; shrimp shaomai</p>
           <p class="notes">Always busy.</p>
           <div class="cost">Moderate</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="23.114951" data-lng="113.328645" data-search="bingsheng mansion (zhujiang new town) 炳胜公馆（珠江新城店） tianhe guangzhou goose sells out. roast goose (15/day); pepper crab">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="tengyuan shengjian 腾元生煎 liwan / xihua rd guangzhou ig reel · @ annie_inguangzhou1 · high confidence — xihua rd&#x27;s famous queue for crispy-bottom shengjianbao with juicy pork filling; go before 09:00 or after 14:00. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Tengyuan Shengjian</h3>
+          <div class="zh-title">腾元生煎</div>
+          <div class="where">Liwan / Xihua Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">荔湾区西华路439号</div><div class="en">439 Xihua Rd, Liwan District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.251659,23.129872&amp;name=Tengyuan%20Shengjian&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%85%BE%E5%85%83%E7%94%9F%E7%85%8E" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DZNMPoYyMwk/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ annie_inguangzhou1 · high confidence — Xihua Rd&#x27;s famous queue for crispy-bottom shengjianbao with juicy pork filling; go before 09:00 or after 14:00.</p>
+          <div class="cost">¥11 box of 4</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="wenji handmade rice noodles (xihua rd) 文记河粉 liwan / xihua rd guangzhou ig reel · @ annie_inguangzhou1 · high confidence — handmade flat rice noodles, beef brisket dry noodles (牛腩捞粉); sells out by ~14:00, reel says closed mondays. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="flag">Check first — may be closed</span></div>
+          <h3>Wenji Handmade Rice Noodles (Xihua Rd)</h3>
+          <div class="zh-title">文记河粉</div>
+          <div class="where">Liwan / Xihua Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">荔湾区西华路418号金平大厦1153铺</div><div class="en">Shop 1153, Jinping Building, 418 Xihua Rd, Liwan District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.25121,23.129579&amp;name=Wenji%20Handmade%20Rice%20Noodles%20%28Xihua%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%87%E8%AE%B0%E6%B2%B3%E7%B2%89" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DZNMPoYyMwk/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ annie_inguangzhou1 · high confidence — Handmade flat rice noodles, beef brisket dry noodles (牛腩捞粉); sells out by ~14:00, reel says closed Mondays.</p>
+          <div class="cost">¥16 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="zhenzhen snack shop 珍珍小食店 liwan / xihua rd guangzhou ig reel · @ annie_inguangzhou1 · high confidence — 40-year-old family shop since 1982; braised beef brisket noodles and tripe soup (牛三星汤). ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Zhenzhen Snack Shop</h3>
+          <div class="zh-title">珍珍小食店</div>
+          <div class="where">Liwan / Xihua Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">荔湾区西华路183号1层</div><div class="en">183 Xihua Rd, Liwan District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.246747,23.132422&amp;name=Zhenzhen%20Snack%20Shop&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8F%8D%E7%8F%8D%E5%B0%8F%E9%A3%9F%E5%BA%97" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DZNMPoYyMwk/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ annie_inguangzhou1 · high confidence — 40-year-old family shop since 1982; braised beef brisket noodles and tripe soup (牛三星汤).</p>
+          <div class="cost">¥26-30 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="bingsheng mansion (zhujiang new town) 炳胜公馆（珠江新城店） tianhe guangzhou goose sells out. roast goose (15/day); pepper crab">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>BingSheng Mansion (Zhujiang New Town)</h3>
           <div class="zh-title">炳胜公馆（珠江新城店）</div>
           <div class="where">Tianhe · Guangzhou</div>
           <div class="addr"><div class="zh">冼村路2号</div><div class="en">5F Shoufu Mansion, 2 Xiancun Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=113.328645,23.114951&amp;name=BingSheng%20Mansion%20%28Zhujiang%20New%20Town%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/3896899" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%82%B3%E8%83%9C%E5%85%AC%E9%A6%86%EF%BC%88%E7%8F%A0%E6%B1%9F%E6%96%B0%E5%9F%8E%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/3896899" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%82%B3%E8%83%9C%E5%85%AC%E9%A6%86%EF%BC%88%E7%8F%A0%E6%B1%9F%E6%96%B0%E5%9F%8E%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Roast goose (15/day); pepper crab</p>
           <p class="notes">Goose sells out.</p>
           <div class="cost">~¥427 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="23.134641" data-lng="113.333175" data-search="jiang by chef fei 江（广州文华东方酒店） tianhe guangzhou lunch is the best value. dim sum lunch; roasted wenchang chicken">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="jiang by chef fei 江（广州文华东方酒店） tianhe guangzhou lunch is the best value. dim sum lunch; roasted wenchang chicken">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">2★</span></div>
           <h3>Jiang by Chef Fei</h3>
           <div class="zh-title">江（广州文华东方酒店）</div>
           <div class="where">Tianhe · Guangzhou</div>
           <div class="addr"><div class="zh">天河路389号</div><div class="en">3F Mandarin Oriental, 389 Tianhe Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=113.333175,23.134641&amp;name=Jiang%20by%20Chef%20Fei&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/8877535" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B1%9F%EF%BC%88%E5%B9%BF%E5%B7%9E%E6%96%87%E5%8D%8E%E4%B8%9C%E6%96%B9%E9%85%92%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/8877535" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B1%9F%EF%BC%88%E5%B9%BF%E5%B7%9E%E6%96%87%E5%8D%8E%E4%B8%9C%E6%96%B9%E9%85%92%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Dim sum lunch; roasted Wenchang chicken</p>
           <p class="notes">Lunch is the best value.</p>
           <div class="cost">~¥671 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lingnan house (rosewood guangzhou) 广御轩 tianhe / zhujiang new town guangzhou ig reel · @ amber.days_ · high confidence — 1-michelin-star cantonese; creator&#x27;s favourite meal of trip — angel hair pasta with shrimp and sichuan pepper, steamed fish, crispy pork belly. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Lingnan House (Rosewood Guangzhou)</h3>
+          <div class="zh-title">广御轩</div>
+          <div class="where">Tianhe / Zhujiang New Town · Guangzhou</div>
+          <div class="addr"><div class="zh">天河区珠江东路6号瑰丽酒店5楼</div><div class="en">5F, Rosewood Guangzhou, 6 Zhujiang East Rd, Tianhe District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.325922,23.117735&amp;name=Lingnan%20House%20%28Rosewood%20Guangzhou%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%B9%BF%E5%BE%A1%E8%BD%A9" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/De8sMowuMS-/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ amber.days_ · high confidence — 1-Michelin-star Cantonese; creator&#x27;s favourite meal of trip — angel hair pasta with shrimp and Sichuan pepper, steamed fish, crispy pork belly.</p>
+          <div class="cost">¥430-700 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="dagefan (beijing rd) 大鸽饭 yuexiu / beijing rd guangzhou ig reel · @ bynessa_ · high confidence — michelin bib gourmand roast pigeon specialist; order salt-baked and roast pigeon, truffle pigeon claypot rice. queue on dianping, 11:00-21:30. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Dagefan (Beijing Rd)</h3>
+          <div class="zh-title">大鸽饭</div>
+          <div class="where">Yuexiu / Beijing Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">越秀区西湖路68号</div><div class="en">68 Xihu Rd, Yuexiu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.266836,23.123196&amp;name=Dagefan%20%28Beijing%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%A4%A7%E9%B8%BD%E9%A5%AD" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/Deyqn45proS/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ bynessa_ · high confidence — Michelin Bib Gourmand roast pigeon specialist; order salt-baked and roast pigeon, truffle pigeon claypot rice. Queue on Dianping, 11:00-21:30.</p>
+          <div class="cost">¥198 set for 2</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="guan lu tea house (guanlu rd) 关吕茶楼 yuexiu / beijing rd guangzhou ig reel · @ tongyun_lin · high confidence — decades-old morning tea house; har gow, siu mai, duck feet bundle with taro, rare crispy sugar egg puffs (sa yong). ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Guan Lu Tea House (Guanlu Rd)</h3>
+          <div class="zh-title">关吕茶楼</div>
+          <div class="where">Yuexiu / Beijing Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">越秀区关吕路16-18号</div><div class="en">16-18 Guanlu Rd, Yuexiu District, near Beijing Rd Pedestrian Street</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.243201,23.113427&amp;name=Guan%20Lu%20Tea%20House%20%28Guanlu%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%B3%E5%90%95%E8%8C%B6%E6%A5%BC" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/Db4qbt2h6MO/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ tongyun_lin · high confidence — Decades-old morning tea house; har gow, siu mai, duck feet bundle with taro, rare crispy sugar egg puffs (sa yong).</p>
+          
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="beijing road pedestrian street 北京路步行街 yuexiu / beijing rd guangzhou ig reel · @ annie_inguangzhou1 · medium confidence — anchor of the reel&#x27;s shopping route: 1km historic shopping street, song/ming road layers under glass, metro gongyuanqian. individual market stops in reel not separately verified. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Beijing Road Pedestrian Street</h3>
+          <div class="zh-title">北京路步行街</div>
+          <div class="where">Yuexiu / Beijing Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">越秀区北京路步行街</div><div class="en">Beijing Rd, Yuexiu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.268359,23.122109&amp;name=Beijing%20Road%20Pedestrian%20Street&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8C%97%E4%BA%AC%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/Dfe06wfhR9u/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ annie_inguangzhou1 · medium confidence — Anchor of the reel&#x27;s shopping route: 1km historic shopping street, Song/Ming road layers under glass, Metro Gongyuanqian. Individual market stops in reel not separately verified.</p>
+          
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="bai hua dessert (wenming rd) 百花甜品店 yuexiu / wenming rd guangzhou ig reel · @ eternalchinatours · high confidence — 30+ year tong sui shop, 400-item menu; ginger milk pudding (姜撞奶), double-skin milk, phoenix milk custard. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Bai Hua Dessert (Wenming Rd)</h3>
+          <div class="zh-title">百花甜品店</div>
+          <div class="where">Yuexiu / Wenming Rd · Guangzhou</div>
+          <div class="addr"><div class="zh">越秀区文明路210号</div><div class="en">210 Wenming Rd, Yuexiu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.275551,23.122554&amp;name=Bai%20Hua%20Dessert%20%28Wenming%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%99%BE%E8%8A%B1%E7%94%9C%E5%93%81%E5%BA%97" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/Db5ifWOCoW6/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ eternalchinatours · high confidence — 30+ year tong sui shop, 400-item menu; ginger milk pudding (姜撞奶), double-skin milk, Phoenix milk custard.</p>
+          <div class="cost">¥15 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="beiyuan cuisine 北园酒家 yuexiu / xiaobei guangzhou ig reel · @ amber.days_ · high confidence — 1928 lingnan garden restaurant, michelin-listed; dim sum, huadiao drunken chicken, char siu puff pastry. metro xiaobei exit b. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Beiyuan Cuisine</h3>
+          <div class="zh-title">北园酒家</div>
+          <div class="where">Yuexiu / Xiaobei · Guangzhou</div>
+          <div class="addr"><div class="zh">越秀区小北路200-202号</div><div class="en">200-202 Xiaobei Rd, Yuexiu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.27262,23.1367&amp;name=Beiyuan%20Cuisine&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8C%97%E5%9B%AD%E9%85%92%E5%AE%B6" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/De8sMowuMS-/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ amber.days_ · high confidence — 1928 Lingnan garden restaurant, Michelin-listed; dim sum, Huadiao drunken chicken, char siu puff pastry. Metro Xiaobei Exit B.</p>
+          <div class="cost">¥80-150 pp</div>
         </article></section><section class="day"><h2>Hong Kong</h2>
-        <article class="card food" data-type="Food" data-lat="22.286626" data-lng="114.156663" data-search="lung king heen 龙景轩 central hong kong window tables go first. dim sum lunch; double-boiled soups">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="chun kee restaurant 駿記廚房 causeway bay / hennessy rd hong kong ig reel · @ bellywongs.eats · high confidence — hidden upstairs dai pai dong; aged crispy-skin chicken (hk$238), hk$19 garlic scallops, sichuan pickled fish. seafood set hk$498 for 4 sun-thu. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Chun Kee Restaurant</h3>
+          <div class="zh-title">駿記廚房</div>
+          <div class="where">Causeway Bay / Hennessy Rd · Hong Kong</div>
+          <div class="addr"><div class="zh">銅鑼灣軒尼詩道525號澳門逸園中心3樓</div><div class="en">3/F, Macau Yat Yuen Centre, 525 Hennessy Rd, Causeway Bay</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%A7%BF%E8%A8%98%E5%BB%9A%E6%88%BF" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DfbRkGwgO-5/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ bellywongs.eats · high confidence — Hidden upstairs dai pai dong; aged crispy-skin chicken (HK$238), HK$19 garlic scallops, Sichuan pickled fish. Seafood set HK$498 for 4 Sun-Thu.</p>
+          <div class="cost">HK$~100 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lung king heen 龙景轩 central hong kong window tables go first. dim sum lunch; double-boiled soups">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">2★</span></div>
           <h3>Lung King Heen</h3>
           <div class="zh-title">龙景轩</div>
@@ -105,7 +228,7 @@
           <p class="notes">Window tables go first.</p>
           <div class="cost">Special occasion</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="22.284839" data-lng="114.152971" data-search="the chairman 大班楼 central hong kong probably full; watch cancellations. steamed crab with huadiao; flat rice noodles">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="the chairman 大班楼 central hong kong probably full; watch cancellations. steamed crab with huadiao; flat rice noodles">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>The Chairman</h3>
           <div class="zh-title">大班楼</div>
@@ -116,7 +239,139 @@
           <p class="notes">Probably full; watch cancellations.</p>
           <div class="cost">Special occasion</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="22.277660" data-lng="114.175300" data-search="kam&#x27;s roast goose 甘牌烧鹅 wan chai hong kong queues are common. roast goose; blood pudding; goose-fat noodles">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lan fong yuen 蘭芳園 central / gage st hong kong ig reel · @ chels_eatravel · high confidence — inventor of silk-stocking milk tea; pork chop bun, french toast, spring-onion chicken noodles. mon-sat 7:30-18:00, closed sun. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="flag">Check first — may be closed</span></div>
+          <h3>Lan Fong Yuen</h3>
+          <div class="zh-title">蘭芳園</div>
+          <div class="where">Central / Gage St · Hong Kong</div>
+          <div class="addr"><div class="zh">中環結志街2號</div><div class="en">G/F, 2 Gage St, Central</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%98%AD%E8%8A%B3%E5%9C%92" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DMPq3JYTcS7/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ chels_eatravel · high confidence — Inventor of silk-stocking milk tea; pork chop bun, French toast, spring-onion chicken noodles. Mon-Sat 7:30-18:00, closed Sun.</p>
+          <div class="cost">HK$20-36</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="mak&#x27;s noodle (wellington st) 麥奀雲吞麵世家 central / wellington st hong kong ig reel · @ fred.and.chloe · high confidence — shrimp wonton noodles in clear broth; small bowls, michelin guide pick. open 11:00-21:00. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Mak&#x27;s Noodle (Wellington St)</h3>
+          <div class="zh-title">麥奀雲吞麵世家</div>
+          <div class="where">Central / Wellington St · Hong Kong</div>
+          <div class="addr"><div class="zh">中環威靈頓街77號地下</div><div class="en">G/F, 77 Wellington St, Central</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%BA%A5%E5%A5%80%E9%9B%B2%E5%90%9E%E9%BA%B5%E4%B8%96%E5%AE%B6" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/C71FeXivmDQ/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ fred.and.chloe · high confidence — Shrimp wonton noodles in clear broth; small bowls, Michelin Guide pick. Open 11:00-21:00.</p>
+          <div class="cost">HK$50-100 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="heimat by peter find  central / wyndham st (lan kwai fong) hong kong ig reel · @ talkfood · high confidence — hk&#x27;s first german fine dining; reimagined bratwurst, schnitzel, schweinshaxe, käsespätzle. dinner tasting from hk$788 pp; book ahead. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Heimat by Peter Find</h3>
+          <div class="zh-title"></div>
+          <div class="where">Central / Wyndham St (Lan Kwai Fong) · Hong Kong</div>
+          <div class="addr"><div class="zh">中環雲咸街33號蘭桂坊大廈8樓</div><div class="en">8/F, LKF Tower, 33 Wyndham St, Central</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=Heimat%20by%20Peter%20Find" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DDOrxF7J7-V/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ talkfood · high confidence — HK&#x27;s first German fine dining; reimagined bratwurst, schnitzel, schweinshaxe, käsespätzle. Dinner tasting from HK$788 pp; book ahead.</p>
+          <div class="cost">HK$788 pp tasting menu</div>
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="cheung chau 長洲 cheung chau (outlying islands) hong kong ig reel · @ foodierrachel · high confidence — car-free island day trip, 35-60 min ferry from central pier 5; beaches, seafood, temples, mini great wall hike, fishballs and ping on buns. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Cheung Chau</h3>
+          <div class="zh-title">長洲</div>
+          <div class="where">Cheung Chau (Outlying Islands) · Hong Kong</div>
+          <div class="addr"><div class="zh">長洲</div><div class="en">Cheung Chau, Outlying Islands (ferry from Central Pier 5)</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%95%B7%E6%B4%B2" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/C5kfd6pO1PU/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ foodierrachel · high confidence — Car-free island day trip, 35-60 min ferry from Central Pier 5; beaches, seafood, temples, Mini Great Wall hike, fishballs and Ping On buns.</p>
+          <div class="cost">HK$32-50 ferry</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="sun hing restaurant 新興食家 kennedy town / smithfield rd hong kong ig reel · @ sassyhongkong · high confidence — 3am dim sum, open 3:00-16:00; quail-egg siu mai, lava buns, cheung fun, chicken feet. go at dawn. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Sun Hing Restaurant</h3>
+          <div class="zh-title">新興食家</div>
+          <div class="where">Kennedy Town / Smithfield Rd · Hong Kong</div>
+          <div class="addr"><div class="zh">堅尼地城士美菲路8號地下C舖</div><div class="en">Shop C, G/F, 8 Smithfield Rd, Kennedy Town</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E8%88%88%E9%A3%9F%E5%AE%B6" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DM1lrv-B5wb/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ sassyhongkong · high confidence — 3am dim sum, open 3:00-16:00; quail-egg siu mai, lava buns, cheung fun, chicken feet. Go at dawn.</p>
+          <div class="cost">HK$~90 pp</div>
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="red incense burner summit 紅香爐峰 north point / braemar hill hong kong ig reel · @ timmy727 · high confidence — easy 15-min hike (30 min return) to 230m summit; panoramic victoria harbour sunset views. final stretch is unofficial trail with boulder scramble; avoid after rain/dark. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Red Incense Burner Summit</h3>
+          <div class="zh-title">紅香爐峰</div>
+          <div class="where">North Point / Braemar Hill · Hong Kong</div>
+          <div class="addr"><div class="zh"></div><div class="en">Trailhead by St Joan of Arc Secondary School, Braemar Hill Rd, North Point</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%B4%85%E9%A6%99%E7%88%90%E5%B3%B0" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/C7WOUo4pBtC/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ timmy727 · high confidence — Easy 15-min hike (30 min return) to 230m summit; panoramic Victoria Harbour sunset views. Final stretch is unofficial trail with boulder scramble; avoid after rain/dark.</p>
+          <div class="cost">Free</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="kam wah cafe &amp; cake shop 金華冰廳 prince edward / bute st hong kong ig reel · @ itschauyeex · high confidence — iconic cha chaan teng since 1973; pineapple bun with butter (hk$18), egg tarts, french toast. open 6:30-23:00, no reservations. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Kam Wah Cafe &amp; Cake Shop</h3>
+          <div class="zh-title">金華冰廳</div>
+          <div class="where">Prince Edward / Bute St · Hong Kong</div>
+          <div class="addr"><div class="zh">太子弼街47號地下</div><div class="en">G/F, 47 Bute St, Prince Edward</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%87%91%E8%8F%AF%E5%86%B0%E5%BB%B3" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DTtxxKXDB59/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ itschauyeex · high confidence — Iconic cha chaan teng since 1973; pineapple bun with butter (HK$18), egg tarts, French toast. Open 6:30-23:00, no reservations.</p>
+          <div class="cost">HK$~20-50 pp</div>
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="jin island (tiu chung chau) 吊鐘洲 sai kung / tiu chung chau hong kong ig reel · @ rcee_xandrahrain · medium confidence — unesco geopark island with goldfish wagging tail sea arch; kayak or chartered boat (~20 min from sai kung pier). hike is difficult 4-5h with steep rope descent; go with a guide, summer only. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Jin Island (Tiu Chung Chau)</h3>
+          <div class="zh-title">吊鐘洲</div>
+          <div class="where">Sai Kung / Tiu Chung Chau · Hong Kong</div>
+          <div class="addr"><div class="zh"></div><div class="en">Tiu Chung Chau, Sai Kung (chartered boat from Sai Kung Pier)</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%90%8A%E9%90%98%E6%B4%B2" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/CySgRPOBOGd/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ rcee_xandrahrain · medium confidence — UNESCO Geopark island with Goldfish Wagging Tail sea arch; kayak or chartered boat (~20 min from Sai Kung Pier). Hike is difficult 4-5h with steep rope descent; go with a guide, summer only.</p>
+          <div class="cost">HK$~200 pp shared boat</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="pot of soup (shek tong tsui)  shek tong tsui / hill rd hong kong ig reel · @ abigailchin.co · medium confidence — hk-style hot pot; steamed seafood, coconut soup, steamed chicken. open 17:00-00:00. reel branch not confirmed — other branches exist in jordan/tsuen wan. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Pot of Soup (Shek Tong Tsui)</h3>
+          <div class="zh-title"></div>
+          <div class="where">Shek Tong Tsui / Hill Rd · Hong Kong</div>
+          <div class="addr"><div class="zh">西環石塘咀山道54-66號適安大廈地下A號舖及1樓AB號舖</div><div class="en">Shop A, G/F &amp; Shop AB, 1/F, Sik On House, 54-66 Hill Rd, Shek Tong Tsui</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=Pot%20of%20Soup%20%28Shek%20Tong%20Tsui%29" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DUIbCHqk-bP/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ abigailchin.co · medium confidence — HK-style hot pot; steamed seafood, coconut soup, steamed chicken. Open 17:00-00:00. Reel branch not confirmed — other branches exist in Jordan/Tsuen Wan.</p>
+          <div class="cost">HK$201-400 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="blackwood izakaya (tsim sha tsui) 黑木亭居酒屋 tsim sha tsui / cameron rd hong kong ig reel · @ blackwood_izakaya_tst · high confidence — japanese ayce buffet: a5 wagyu, toro sashimi, uni, sukiyaki, sushi, plus häagen-dazs. about hk$300 pp; book via inline. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Blackwood Izakaya (Tsim Sha Tsui)</h3>
+          <div class="zh-title">黑木亭居酒屋</div>
+          <div class="where">Tsim Sha Tsui / Cameron Rd · Hong Kong</div>
+          <div class="addr"><div class="zh">尖沙咀金馬倫道58-60號國鈀大廈1樓</div><div class="en">1/F, Kok Pah Mansion, 58-60 Cameron Rd, Tsim Sha Tsui</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%BB%91%E6%9C%A8%E4%BA%AD%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DPlYkPAj5A_/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ blackwood_izakaya_tst · high confidence — Japanese AYCE buffet: A5 wagyu, toro sashimi, uni, sukiyaki, sushi, plus Häagen-Dazs. About HK$300 pp; book via Inline.</p>
+          <div class="cost">HK$300 pp AYCE</div>
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="cupnoodles museum hong kong 合味道紀念館 tsim sha tsui / canton rd hong kong ig reel · @ ilikefishballs · low confidence — closed: announced closure 11 jan 2026, do not plan a visit. was my cupnoodles + 90-min demae iccho make-your-own-noodles workshop. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span><span class="flag">Check first — may be closed</span></div>
+          <h3>CUPNOODLES Museum Hong Kong</h3>
+          <div class="zh-title">合味道紀念館</div>
+          <div class="where">Tsim Sha Tsui / Canton Rd · Hong Kong</div>
+          <div class="addr"><div class="zh">尖沙咀廣東道33號中港城2樓26-35號舖</div><div class="en">Shops 26-35, 2/F, China Hong Kong City, 33 Canton Rd, Tsim Sha Tsui</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%90%88%E5%91%B3%E9%81%93%E7%B4%80%E5%BF%B5%E9%A4%A8" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/C8b3vjTPhLa/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ ilikefishballs · low confidence — CLOSED: announced closure 11 Jan 2026, do not plan a visit. Was My CUPNOODLES + 90-min Demae Iccho make-your-own-noodles workshop.</p>
+          <div class="cost">HK$120 Demae Iccho workshop</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="kison roast goose (carnarvon rd) 棋哥燒鵝 tsim sha tsui / carnarvon rd hong kong ig reel · @ uncle_k_hong_kong · high confidence — crispy-skinned roast goose, char siu, roast pork belly; dip in plum sauce. open 10:00-22:30. second branch at 34-36a cameron rd. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Kison Roast Goose (Carnarvon Rd)</h3>
+          <div class="zh-title">棋哥燒鵝</div>
+          <div class="where">Tsim Sha Tsui / Carnarvon Rd · Hong Kong</div>
+          <div class="addr"><div class="zh">尖沙咀加拿分道40-46號香檳大廈地下2號舖</div><div class="en">Shop 2, G/F, Champagne Court, 40-46 Carnarvon Rd, Tsim Sha Tsui</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%A3%8B%E5%93%A5%E7%87%92%E9%B5%9D" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DX_yDqBTFx_/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ uncle_k_hong_kong · high confidence — Crispy-skinned roast goose, char siu, roast pork belly; dip in plum sauce. Open 10:00-22:30. Second branch at 34-36A Cameron Rd.</p>
+          <div class="cost">HK$51-100 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="kam&#x27;s roast goose 甘牌烧鹅 wan chai hong kong queues are common. roast goose; blood pudding; goose-fat noodles">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Kam&#x27;s Roast Goose</h3>
           <div class="zh-title">甘牌烧鹅</div>
@@ -126,63 +381,85 @@
           <p class="order"><b>Order:</b> Roast goose; blood pudding; goose-fat noodles</p>
           <p class="notes">Queues are common.</p>
           <div class="cost">Moderate</div>
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="hopewell centre 62f viewpoint 合和中心 wan chai / queen&#x27;s rd east hong kong ig reel · @ wisteria_voyage · high confidence — free glass observation lift from 17f to 62f (revolving restaurant level); panoramic wan chai/harbour views. ride up and back down, no booking. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Hopewell Centre 62F Viewpoint</h3>
+          <div class="zh-title">合和中心</div>
+          <div class="where">Wan Chai / Queen&#x27;s Rd East · Hong Kong</div>
+          <div class="addr"><div class="zh">灣仔皇后大道東183號合和中心</div><div class="en">Hopewell Centre, 183 Queen&#x27;s Rd East, Wan Chai</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%90%88%E5%92%8C%E4%B8%AD%E5%BF%83" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DKBac5VRX7a/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ wisteria_voyage · high confidence — Free glass observation lift from 17F to 62F (revolving restaurant level); panoramic Wan Chai/harbour views. Ride up and back down, no booking.</p>
+          <div class="cost">Free</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="my cup of tea (wan chai) 我杯茶 wan chai / spring garden lane hong kong ig reel · @ freckledfoodiee · high confidence — award-winning hk milk tea (hk$22); tomato char siu macaroni, pineapple buns, egg sandwiches. open 7:00-18:30. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>My Cup of Tea (Wan Chai)</h3>
+          <div class="zh-title">我杯茶</div>
+          <div class="where">Wan Chai / Spring Garden Lane · Hong Kong</div>
+          <div class="addr"><div class="zh">灣仔春園街6號永興樓地下</div><div class="en">G/F, Wing Hing Building, 6 Spring Garden Lane, Wan Chai</div></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%88%91%E6%9D%AF%E8%8C%B6" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DGmsUn9ySEH/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ freckledfoodiee · high confidence — Award-winning HK milk tea (HK$22); tomato char siu macaroni, pineapple buns, egg sandwiches. Open 7:00-18:30.</p>
+          <div class="cost">HK$~50-70 pp</div>
         </article></section><section class="day"><h2>Shanghai</h2>
-        <article class="card food" data-type="Food" data-lat="31.218639" data-lng="121.429693" data-search="fu he hui 福和慧 changning shanghai fully vegan; set menus only. seasonal vegan set; tea pairing">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="fu he hui 福和慧 changning shanghai fully vegan; set menus only. seasonal vegan set; tea pairing">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">2★</span></div>
-          <h3>Fu He Hui</h3>
+          <h3>Fu He Hui</h3><img class="photo" src="https://p0.meituan.net/biztone/a69ff26d9a30d21e3551409b8077cb8b457809.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">福和慧</div>
           <div class="where">Changning · Shanghai</div>
           <div class="addr"><div class="zh">愚园路1037号</div><div class="en">1037 Yuyuan Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.429693,31.218639&amp;name=Fu%20He%20Hui&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/16795494" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%A6%8F%E5%92%8C%E6%85%A7" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/16795494" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%A6%8F%E5%92%8C%E6%85%A7" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Seasonal vegan set; tea pairing</p>
           <p class="notes">Fully vegan; set menus only.</p>
           <div class="cost">~¥1,199 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.206940" data-lng="121.423707" data-search="huxi laonongtang noodle house 沪西老弄堂面馆（定西路店） changning shanghai about eight years on 必吃榜; off-peak is better. 红烧大肠面; spicy pork noodles">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="huxi laonongtang noodle house 沪西老弄堂面馆（定西路店） changning shanghai about eight years on 必吃榜; off-peak is better. 红烧大肠面; spicy pork noodles">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Huxi Laonongtang Noodle House</h3>
+          <h3>Huxi Laonongtang Noodle House</h3><img class="photo" src="https://qcloud.dpfile.com/pc/EC9mtupZdp2YFI12f-9HDoetn1KuJUdb_QQsUgeXTVF9xNqShLEX5xF77p4WPXbFtinsm4wZBU2JBzCyrLLxBw.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">沪西老弄堂面馆（定西路店）</div>
           <div class="where">Changning · Shanghai</div>
           <div class="addr"><div class="zh">定西路685号101</div><div class="en">685 Dingxi Rd unit 101</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.423707,31.20694&amp;name=Huxi%20Laonongtang%20Noodle%20House&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/93431005" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B2%AA%E8%A5%BF%E8%80%81%E5%BC%84%E5%A0%82%E9%9D%A2%E9%A6%86%EF%BC%88%E5%AE%9A%E8%A5%BF%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/93431005" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B2%AA%E8%A5%BF%E8%80%81%E5%BC%84%E5%A0%82%E9%9D%A2%E9%A6%86%EF%BC%88%E5%AE%9A%E8%A5%BF%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 红烧大肠面; spicy pork noodles</p>
           <p class="notes">About eight years on 必吃榜; off-peak is better.</p>
           <div class="cost">¥25-43 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.215924" data-lng="121.434772" data-search="jiukuan ningbo (huamin century plaza) 旧款宁波饭店（华敏世纪广场店） changning shanghai heavy oil and smoke; ask what is fresh. 煎笋脯; 苔条黄鱼; 咸鱼口条煲; 醉虾">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="jiukuan ningbo (huamin century plaza) 旧款宁波饭店（华敏世纪广场店） changning shanghai heavy oil and smoke; ask what is fresh. 煎笋脯; 苔条黄鱼; 咸鱼口条煲; 醉虾">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Jiukuan Ningbo (Huamin Century Plaza)</h3>
           <div class="zh-title">旧款宁波饭店（华敏世纪广场店）</div>
           <div class="where">Changning · Shanghai</div>
           <div class="addr"><div class="zh">延安西路660号</div><div class="en">660 Yan&#x27;an West Rd, Huamin Century Plaza</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.434772,31.215924&amp;name=Jiukuan%20Ningbo%20%28Huamin%20Century%20Plaza%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/11575122" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A7%E6%AC%BE%E5%AE%81%E6%B3%A2%E9%A5%AD%E5%BA%97%EF%BC%88%E5%8D%8E%E6%95%8F%E4%B8%96%E7%BA%AA%E5%B9%BF%E5%9C%BA%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/11575122" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A7%E6%AC%BE%E5%AE%81%E6%B3%A2%E9%A5%AD%E5%BA%97%EF%BC%88%E5%8D%8E%E6%95%8F%E4%B8%96%E7%BA%AA%E5%B9%BF%E5%9C%BA%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 煎笋脯; 苔条黄鱼; 咸鱼口条煲; 醉虾</p>
           <p class="notes">Heavy oil and smoke; ask what is fresh.</p>
           <div class="cost">¥62-176 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.213619" data-lng="121.427276" data-search="nabi nabi changning shanghai michelin-listed; closed sun/mon. seasonal korean tasting menu">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="nabi nabi changning shanghai michelin-listed; closed sun/mon. seasonal korean tasting menu">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">Guide</span></div>
           <h3>NABI</h3>
           <div class="zh-title">NABI</div>
           <div class="where">Changning · Shanghai</div>
           <div class="addr"><div class="zh">武夷路168号</div><div class="en">201 Bldg 1 WYSH, 168 Wuyi Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.427276,31.213619&amp;name=NABI&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1814397385" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=NABI" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/1814397385" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=NABI" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Seasonal Korean tasting menu</p>
           <p class="notes">MICHELIN-listed; closed Sun/Mon.</p>
           <div class="cost">~¥1,088-1,388 +10%</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.222915" data-lng="121.434176" data-search="taian table 泰安门 changning shanghai only 3-star in shanghai; counter seats. set menu only; changes every few weeks">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="taian table 泰安门 changning shanghai only 3-star in shanghai; counter seats. set menu only; changes every few weeks">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">3★</span></div>
           <h3>Taian Table</h3>
           <div class="zh-title">泰安门</div>
           <div class="where">Changning · Shanghai</div>
           <div class="addr"><div class="zh">镇宁路465弄</div><div class="en">Lane 465 Zhenning Rd, Yuyuan Li</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.434176,31.222915&amp;name=Taian%20Table&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/l6jkSFu3WNgGb64C" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B3%B0%E5%AE%89%E9%97%A8" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/l6jkSFu3WNgGb64C" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B3%B0%E5%AE%89%E9%97%A8" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Set menu only; changes every few weeks</p>
           <p class="notes">Only 3-star in Shanghai; counter seats.</p>
           <div class="cost">~¥2,644 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.219165" data-lng="121.451272" data-search="lucky mart (konbini izakaya) lucky mart 富民路 fumin rd / jing&#x27;an shanghai snacks and highballs, ~¥35-45. open late. any evening. ">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lucky mart (konbini izakaya) lucky mart 富民路 fumin rd / jing&#x27;an shanghai snacks and highballs, ~¥35-45. open late. any evening. ">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Lucky Mart (konbini izakaya)</h3>
           <div class="zh-title">Lucky Mart 富民路</div>
@@ -193,7 +470,7 @@
           <p class="notes">Snacks and highballs, ~¥35-45. Open late. Any evening.</p>
           <div class="cost">¥35-45 pp</div>
         </article>
-        <article class="card event" data-type="Event" data-lat="31.216980" data-lng="121.469115" data-search="ins land (club complex) ins新乐园 fuxing park / huangpu shanghai one pass covers ~9 clubs. ¥168 wed/thu/sun, ¥288 fri/sat. 18+ with passport. hours conflict: 15:00-06:00 vs ~21:00 wed-sun. ">
+        <article class="card event" data-type="Event" data-lat="" data-lng="" data-search="ins land (club complex) ins新乐园 fuxing park / huangpu shanghai one pass covers ~9 clubs. ¥168 wed/thu/sun, ¥288 fri/sat. 18+ with passport. hours conflict: 15:00-06:00 vs ~21:00 wed-sun. ">
           <div class="meta"><span class="type">Event</span><span class="dist"></span></div>
           <h3>INS Land (club complex)</h3>
           <div class="zh-title">INS新乐园</div>
@@ -204,227 +481,337 @@
           <p class="notes">One pass covers ~9 clubs. ¥168 Wed/Thu/Sun, ¥288 Fri/Sat. 18+ with passport. Hours conflict: 15:00-06:00 vs ~21:00 Wed-Sun.</p>
           <div class="cost">¥168 Sun</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.252593" data-lng="121.508043" data-search="yong fu (north bund) 甬府·北外滩（虹口） hongkou shanghai expensive; window tables go first. white crabmeat; yellow croaker; cattail with shrimp roe">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yong fu (north bund) 甬府·北外滩（虹口） hongkou shanghai expensive; window tables go first. white crabmeat; yellow croaker; cattail with shrimp roe">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Yong Fu (North Bund)</h3>
           <div class="zh-title">甬府·北外滩（虹口）</div>
           <div class="where">Hongkou · Shanghai</div>
           <div class="addr"><div class="zh">东大名路1089号</div><div class="en">56F East Tower, Raffles City The Bund, 1089 Dongdaming Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.508043,31.252593&amp;name=Yong%20Fu%20%28North%20Bund%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1954492231" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%94%AC%E5%BA%9C%C2%B7%E5%8C%97%E5%A4%96%E6%BB%A9%EF%BC%88%E8%99%B9%E5%8F%A3%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/1954492231" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%94%AC%E5%BA%9C%C2%B7%E5%8C%97%E5%A4%96%E6%BB%A9%EF%BC%88%E8%99%B9%E5%8F%A3%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> White crabmeat; yellow croaker; cattail with shrimp roe</p>
           <p class="notes">Expensive; window tables go first.</p>
           <div class="cost">~¥997 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.236955" data-lng="121.485988" data-search="cheng long hang (jiujiang rd) 成隆行蟹王府（九江路店） huangpu shanghai one listing showed temporarily closed; confirm. drunken crab; steamed crab shell">
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="shanghai postal museum 上海邮政博物馆 hongkou / north suzhou rd (north bund) shanghai ig reel · @ chinaloveforyou · medium confidence — 1924 general post office; free museum of china&#x27;s postal history in a baroque hall, free stamp souvenir per the reel. hours conflict across sources (wed/thu/sat/sun 9:00-17:00 vs tue-sun since aug 2025) — check before going; entrance sometimes 395 tiantong rd. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Shanghai Postal Museum</h3>
+          <div class="zh-title">上海邮政博物馆</div>
+          <div class="where">Hongkou / North Suzhou Rd (North Bund) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市虹口区北苏州路250号</div><div class="en">250 North Suzhou Rd, Hongkou District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.485539,31.244509&amp;name=Shanghai%20Postal%20Museum&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%8A%E6%B5%B7%E9%82%AE%E6%94%BF%E5%8D%9A%E7%89%A9%E9%A6%86" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DXqKd6Yjtym/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ chinaloveforyou · medium confidence — 1924 General Post Office; free museum of China&#x27;s postal history in a Baroque hall, free stamp souvenir per the reel. Hours conflict across sources (Wed/Thu/Sat/Sun 9:00-17:00 vs Tue-Sun since Aug 2025) — check before going; entrance sometimes 395 Tiantong Rd.</p>
+          <div class="cost">Free</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="cheng long hang (jiujiang rd) 成隆行蟹王府（九江路店） huangpu shanghai one listing showed temporarily closed; confirm. drunken crab; steamed crab shell">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Cheng Long Hang (Jiujiang Rd)</h3>
           <div class="zh-title">成隆行蟹王府（九江路店）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">九江路216号</div><div class="en">216 Jiujiang Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.485988,31.236955&amp;name=Cheng%20Long%20Hang%20%28Jiujiang%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/500102" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%88%90%E9%9A%86%E8%A1%8C%E8%9F%B9%E7%8E%8B%E5%BA%9C%EF%BC%88%E4%B9%9D%E6%B1%9F%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/500102" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%88%90%E9%9A%86%E8%A1%8C%E8%9F%B9%E7%8E%8B%E5%BA%9C%EF%BC%88%E4%B9%9D%E6%B1%9F%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Drunken crab; steamed crab shell</p>
           <p class="notes">One listing showed temporarily closed; confirm.</p>
           <div class="cost">~¥324 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.220386" data-lng="121.467694" data-search="guangmingcun (huaihai middle rd) 光明邨大酒家（淮海中路总店） huangpu shanghai many fake branches; use this huaihai address. 响油鳝丝; 水晶虾仁; 松鼠桂鱼; deli roast meats">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="guangmingcun (huaihai middle rd) 光明邨大酒家（淮海中路总店） huangpu shanghai many fake branches; use this huaihai address. 响油鳝丝; 水晶虾仁; 松鼠桂鱼; deli roast meats">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Guangmingcun (Huaihai Middle Rd)</h3>
+          <h3>Guangmingcun (Huaihai Middle Rd)</h3><img class="photo" src="https://p0.meituan.net/biztone/f4c352ce582d8f7be31a184be77f2cdc150988.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">光明邨大酒家（淮海中路总店）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">淮海中路586-588号</div><div class="en">586-588 Huaihai Middle Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.467694,31.220386&amp;name=Guangmingcun%20%28Huaihai%20Middle%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/501002" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%89%E6%98%8E%E9%82%A8%E5%A4%A7%E9%85%92%E5%AE%B6%EF%BC%88%E6%B7%AE%E6%B5%B7%E4%B8%AD%E8%B7%AF%E6%80%BB%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/501002" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%89%E6%98%8E%E9%82%A8%E5%A4%A7%E9%85%92%E5%AE%B6%EF%BC%88%E6%B7%AE%E6%B5%B7%E4%B8%AD%E8%B7%AF%E6%80%BB%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 响油鳝丝; 水晶虾仁; 松鼠桂鱼; deli roast meats</p>
           <p class="notes">Many fake branches; use this Huaihai address.</p>
           <div class="cost">¥50-150+ pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.221176" data-lng="121.457505" data-search="hai jin zi (jinxian rd) 海金滋（进贤路） huangpu shanghai past bib gourmand; dropped for 2026. 蟹粉炒蛋; 油爆虾; 酱爆猪肝; 红烧肉">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="hai jin zi (jinxian rd) 海金滋（进贤路） huangpu shanghai past bib gourmand; dropped for 2026. 蟹粉炒蛋; 油爆虾; 酱爆猪肝; 红烧肉">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Hai Jin Zi (Jinxian Rd)</h3>
+          <h3>Hai Jin Zi (Jinxian Rd)</h3><img class="photo" src="https://p1.meituan.net/biztone/81c78ea71dcdb792f3eadc9654d068f5293900.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">海金滋（进贤路）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">进贤路240号</div><div class="en">240 Jinxian Rd, near Shaanxi South Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.457505,31.221176&amp;name=Hai%20Jin%20Zi%20%28Jinxian%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/2107483" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B5%B7%E9%87%91%E6%BB%8B%EF%BC%88%E8%BF%9B%E8%B4%A4%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/2107483" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B5%B7%E9%87%91%E6%BB%8B%EF%BC%88%E8%BF%9B%E8%B4%A4%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 蟹粉炒蛋; 油爆虾; 酱爆猪肝; 红烧肉</p>
           <p class="notes">Past Bib Gourmand; dropped for 2026.</p>
           <div class="cost">¥61-65 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.235012" data-lng="121.477286" data-search="hong chang xing (guangxi north rd) 洪长兴（广西北路宝大祥） huangpu shanghai 1891 muslim copper-pot hotpot. 清水涮羊肉; hand-cut lamb; sesame dip">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="hong chang xing (guangxi north rd) 洪长兴（广西北路宝大祥） huangpu shanghai 1891 muslim copper-pot hotpot. 清水涮羊肉; hand-cut lamb; sesame dip">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Hong Chang Xing (Guangxi North Rd)</h3>
           <div class="zh-title">洪长兴（广西北路宝大祥）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">广西北路288号宝大祥10楼</div><div class="en">10F Baodaxiang, 288 Guangxi North Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.477286,31.235012&amp;name=Hong%20Chang%20Xing%20%28Guangxi%20North%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/500259" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B4%AA%E9%95%BF%E5%85%B4%EF%BC%88%E5%B9%BF%E8%A5%BF%E5%8C%97%E8%B7%AF%E5%AE%9D%E5%A4%A7%E7%A5%A5%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/500259" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%B4%AA%E9%95%BF%E5%85%B4%EF%BC%88%E5%B9%BF%E8%A5%BF%E5%8C%97%E8%B7%AF%E5%AE%9D%E5%A4%A7%E7%A5%A5%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 清水涮羊肉; hand-cut lamb; sesame dip</p>
           <p class="notes">1891 Muslim copper-pot hotpot.</p>
           <div class="cost">¥115-220 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.235129" data-lng="121.470302" data-search="jia jia tang bao (huanghe rd) 佳家汤包（黄河路） huangpu shanghai use the huanghe rd branch. 鲜肉小笼; crab-roe xiaolong in season">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="jia jia tang bao (huanghe rd) 佳家汤包（黄河路） huangpu shanghai use the huanghe rd branch. 鲜肉小笼; crab-roe xiaolong in season">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Jia Jia Tang Bao (Huanghe Rd)</h3>
           <div class="zh-title">佳家汤包（黄河路）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">黄河路127号</div><div class="en">127 Huanghe Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.470302,31.235129&amp;name=Jia%20Jia%20Tang%20Bao%20%28Huanghe%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/60971624" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BD%B3%E5%AE%B6%E6%B1%A4%E5%8C%85%EF%BC%88%E9%BB%84%E6%B2%B3%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/60971624" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BD%B3%E5%AE%B6%E6%B1%A4%E5%8C%85%EF%BC%88%E9%BB%84%E6%B2%B3%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 鲜肉小笼; crab-roe xiaolong in season</p>
           <p class="notes">Use the Huanghe Rd branch.</p>
           <div class="cost">¥41-42 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.233786" data-lng="121.490930" data-search="linglong shanghai 凌瓏（外滩华尔道夫） huangpu shanghai likely full; ask for cancellations. seasonal set only">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="linglong shanghai 凌瓏（外滩华尔道夫） huangpu shanghai likely full; ask for cancellations. seasonal set only">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>LINGLONG Shanghai</h3>
           <div class="zh-title">凌瓏（外滩华尔道夫）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">中山东一路2号</div><div class="en">105, 1F Waldorf Astoria, 2 Zhongshan Dong Yi Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.49093,31.233786&amp;name=LINGLONG%20Shanghai&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%87%8C%E7%93%8F%EF%BC%88%E5%A4%96%E6%BB%A9%E5%8D%8E%E5%B0%94%E9%81%93%E5%A4%AB%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%87%8C%E7%93%8F%EF%BC%88%E5%A4%96%E6%BB%A9%E5%8D%8E%E5%B0%94%E9%81%93%E5%A4%AB%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Seasonal set only</p>
           <p class="notes">Likely full; ask for cancellations.</p>
           <div class="cost">¥1,680-2,180 +15%</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.233148" data-lng="121.480065" data-search="lao zheng xing (fuzhou rd) 老正兴菜馆（福州路店） huangpu shanghai founded 1862; old-school room. yellow croaker in wine lees; river shrimp">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lao zheng xing (fuzhou rd) 老正兴菜馆（福州路店） huangpu shanghai founded 1862; old-school room. yellow croaker in wine lees; river shrimp">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Lao Zheng Xing (Fuzhou Rd)</h3>
           <div class="zh-title">老正兴菜馆（福州路店）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">福州路556号</div><div class="en">556 Fuzhou Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.480065,31.233148&amp;name=Lao%20Zheng%20Xing%20%28Fuzhou%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/500368" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%80%81%E6%AD%A3%E5%85%B4%E8%8F%9C%E9%A6%86%EF%BC%88%E7%A6%8F%E5%B7%9E%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/500368" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%80%81%E6%AD%A3%E5%85%B4%E8%8F%9C%E9%A6%86%EF%BC%88%E7%A6%8F%E5%B7%9E%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Yellow croaker in wine lees; river shrimp</p>
           <p class="notes">Founded 1862; old-school room.</p>
           <div class="cost">~¥149 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.237909" data-lng="121.478473" data-search="luo chun ge (zhejiang middle rd) 萝春阁·生煎大王（浙江中路） huangpu shanghai reopened jan 2026; can sell out. 鲜肉生煎; crab-roe shengjian if listed">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="luo chun ge (zhejiang middle rd) 萝春阁·生煎大王（浙江中路） huangpu shanghai reopened jan 2026; can sell out. 鲜肉生煎; crab-roe shengjian if listed">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Luo Chun Ge (Zhejiang Middle Rd)</h3>
           <div class="zh-title">萝春阁·生煎大王（浙江中路）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">浙江中路425-427号</div><div class="en">425-427 Zhejiang Middle Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.478473,31.237909&amp;name=Luo%20Chun%20Ge%20%28Zhejiang%20Middle%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/l6Gy6TOyvKOEymQi" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%90%9D%E6%98%A5%E9%98%81%C2%B7%E7%94%9F%E7%85%8E%E5%A4%A7%E7%8E%8B%EF%BC%88%E6%B5%99%E6%B1%9F%E4%B8%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/l6Gy6TOyvKOEymQi" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%90%9D%E6%98%A5%E9%98%81%C2%B7%E7%94%9F%E7%85%8E%E5%A4%A7%E7%8E%8B%EF%BC%88%E6%B5%99%E6%B1%9F%E4%B8%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 鲜肉生煎; crab-roe shengjian if listed</p>
           <p class="notes">Reopened Jan 2026; can sell out.</p>
           <div class="cost">¥20-40 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.233828" data-lng="121.490141" data-search="sheung fong hotpot (the bund) 上房火锅（外滩店） huangpu shanghai book the bund branch specifically. 花胶鸡 hotpot; a5 beef">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="sheung fong hotpot (the bund) 上房火锅（外滩店） huangpu shanghai book the bund branch specifically. 花胶鸡 hotpot; a5 beef">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Sheung Fong Hotpot (The Bund)</h3>
           <div class="zh-title">上房火锅（外滩店）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">广东路51号大来大楼2楼</div><div class="en">2F Dalai Building, 51 Guangdong Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.490141,31.233828&amp;name=Sheung%20Fong%20Hotpot%20%28The%20Bund%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1729402635" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%8A%E6%88%BF%E7%81%AB%E9%94%85%EF%BC%88%E5%A4%96%E6%BB%A9%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/1729402635" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%8A%E6%88%BF%E7%81%AB%E9%94%85%EF%BC%88%E5%A4%96%E6%BB%A9%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 花胶鸡 hotpot; A5 beef</p>
           <p class="notes">Book the Bund branch specifically.</p>
           <div class="cost">~¥475-568 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.231972" data-lng="121.480091" data-search="shu cai ji (zhejiang middle rd) 舒蔡记（浙江中路） huangpu shanghai busiest at noon. 特色生煎; 咸肉菜饭; 鲜肉锅贴">
-          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Shu Cai Ji (Zhejiang Middle Rd)</h3>
-          <div class="zh-title">舒蔡记（浙江中路）</div>
-          <div class="where">Huangpu · Shanghai</div>
-          <div class="addr"><div class="zh">浙江中路120号</div><div class="en">120 Zhejiang Middle Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.480091,31.231972&amp;name=Shu%20Cai%20Ji%20%28Zhejiang%20Middle%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/127736823" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%88%92%E8%94%A1%E8%AE%B0%EF%BC%88%E6%B5%99%E6%B1%9F%E4%B8%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
-          <p class="order"><b>Order:</b> 特色生煎; 咸肉菜饭; 鲜肉锅贴</p>
-          <p class="notes">Busiest at noon.</p>
-          <div class="cost">¥22 pp</div>
-        </article>
-        <article class="card food" data-type="Food" data-lat="31.234785" data-lng="121.480536" data-search="wang bao he crab buffet 王宝和大闸蟹畅享自助（上海大酒店一楼） huangpu shanghai confirm floor and buffet product. steamed/drunken hairy crab; crab xiaolong">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="wang bao he crab buffet 王宝和大闸蟹畅享自助（上海大酒店一楼） huangpu shanghai confirm floor and buffet product. steamed/drunken hairy crab; crab xiaolong">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Wang Bao He crab buffet</h3>
           <div class="zh-title">王宝和大闸蟹畅享自助（上海大酒店一楼）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">九江路555号上海大酒店1楼</div><div class="en">555 Jiujiang Rd, Shanghai Hotel 1F</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.480536,31.234785&amp;name=Wang%20Bao%20He%20crab%20buffet&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/501581" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8E%8B%E5%AE%9D%E5%92%8C%E5%A4%A7%E9%97%B8%E8%9F%B9%E7%95%85%E4%BA%AB%E8%87%AA%E5%8A%A9%EF%BC%88%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%85%92%E5%BA%97%E4%B8%80%E6%A5%BC%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/501581" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8E%8B%E5%AE%9D%E5%92%8C%E5%A4%A7%E9%97%B8%E8%9F%B9%E7%95%85%E4%BA%AB%E8%87%AA%E5%8A%A9%EF%BC%88%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%85%92%E5%BA%97%E4%B8%80%E6%A5%BC%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Steamed/drunken hairy crab; crab xiaolong</p>
           <p class="notes">Confirm floor and buffet product.</p>
           <div class="cost">~¥258-308 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.235779" data-lng="121.480322" data-search="xian de lai (fujian middle rd) 鲜得来排骨年糕（福建中路） huangpu shanghai moved feb 2026; pin fujian middle rd, not yunnan south rd. 排骨年糕; 虾仁小馄饨">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="xian de lai (fujian middle rd) 鲜得来排骨年糕（福建中路） huangpu shanghai moved feb 2026; pin fujian middle rd, not yunnan south rd. 排骨年糕; 虾仁小馄饨">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Xian De Lai (Fujian Middle Rd)</h3>
+          <h3>Xian De Lai (Fujian Middle Rd)</h3><img class="photo" src="https://p0.meituan.net/biztone/35dbb4cb63b33fb71508c02bbf64b864937854.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">鲜得来排骨年糕（福建中路）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">福建中路</div><div class="en">Fujian Middle Rd food-street cluster</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.480322,31.235779&amp;name=Xian%20De%20Lai%20%28Fujian%20Middle%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/500589" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%B2%9C%E5%BE%97%E6%9D%A5%E6%8E%92%E9%AA%A8%E5%B9%B4%E7%B3%95%EF%BC%88%E7%A6%8F%E5%BB%BA%E4%B8%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/500589" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%B2%9C%E5%BE%97%E6%9D%A5%E6%8E%92%E9%AA%A8%E5%B9%B4%E7%B3%95%EF%BC%88%E7%A6%8F%E5%BB%BA%E4%B8%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 排骨年糕; 虾仁小馄饨</p>
           <p class="notes">Moved Feb 2026; pin Fujian Middle Rd, not Yunnan South Rd.</p>
           <div class="cost">¥32 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.236581" data-lng="121.482503" data-search="xiao shaoxing (shanxi south rd) 小绍兴（山西南路店） huangpu shanghai relocated feb 2026; confirm hours. 白切鸡; 鸡粥; 血汤">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="xiao shaoxing (shanxi south rd) 小绍兴（山西南路店） huangpu shanghai relocated feb 2026; confirm hours. 白切鸡; 鸡粥; 血汤">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Xiao Shaoxing (Shanxi South Rd)</h3>
+          <h3>Xiao Shaoxing (Shanxi South Rd)</h3><img class="photo" src="https://p1.meituan.net/biztone/db273a809b5bdf5d8b03b3ec596f126392502.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">小绍兴（山西南路店）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">山西南路</div><div class="en">Shanxi South Rd, Yunnan Rd laozihao cluster</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.482503,31.236581&amp;name=Xiao%20Shaoxing%20%28Shanxi%20South%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/58067207" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%B0%8F%E7%BB%8D%E5%85%B4%EF%BC%88%E5%B1%B1%E8%A5%BF%E5%8D%97%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/58067207" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%B0%8F%E7%BB%8D%E5%85%B4%EF%BC%88%E5%B1%B1%E8%A5%BF%E5%8D%97%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 白切鸡; 鸡粥; 血汤</p>
           <p class="notes">Relocated Feb 2026; confirm hours.</p>
           <div class="cost">~¥60 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.220960" data-lng="121.470705" data-search="xing&#x27;an restaurant 兴安餐厅（兴安路） huangpu shanghai small lane-house room; shared tables. 椒盐小肉; 咸菜蒸黄鱼; 油焖茭白">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="xing&#x27;an restaurant 兴安餐厅（兴安路） huangpu shanghai small lane-house room; shared tables. 椒盐小肉; 咸菜蒸黄鱼; 油焖茭白">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Xing&#x27;an Restaurant</h3>
           <div class="zh-title">兴安餐厅（兴安路）</div>
           <div class="where">Huangpu · Shanghai</div>
           <div class="addr"><div class="zh">兴安路145号</div><div class="en">145 Xing&#x27;an Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.470705,31.22096&amp;name=Xing%27an%20Restaurant&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1916314" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%B4%E5%AE%89%E9%A4%90%E5%8E%85%EF%BC%88%E5%85%B4%E5%AE%89%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/1916314" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%B4%E5%AE%89%E9%A4%90%E5%8E%85%EF%BC%88%E5%85%B4%E5%AE%89%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 椒盐小肉; 咸菜蒸黄鱼; 油焖茭白</p>
           <p class="notes">Small lane-house room; shared tables.</p>
           <div class="cost">¥80-92 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.234289" data-lng="121.447075" data-search="obscura obscura jing&#x27;an shanghai chef/ownership changed in 2025; confirm. 10-course set; menus change">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="dingxing rd dan bing 定兴路蛋饼摊 huangpu / dingxing rd (people&#x27;s square) shanghai ig reel · @ nom_life · high confidence — husband-and-wife stall (15+ years); shanghai-style egg crepe with pork floss and crispy wonton, from ¥7 base, combos ¥17-23. 05:30-12:30; ~40-min queue at peak, go early. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Dingxing Rd Dan Bing</h3>
+          <div class="zh-title">定兴路蛋饼摊</div>
+          <div class="where">Huangpu / Dingxing Rd (People&#x27;s Square) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区定兴路6号</div><div class="en">6 Dingxing Rd, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.471647,31.235281&amp;name=Dingxing%20Rd%20Dan%20Bing&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%AE%9A%E5%85%B4%E8%B7%AF%E8%9B%8B%E9%A5%BC%E6%91%8A" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DZEQtwospv6/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ nom_life · high confidence — Husband-and-wife stall (15+ years); Shanghai-style egg crepe with pork floss and crispy wonton, from ¥7 base, combos ¥17-23. 05:30-12:30; ~40-min queue at peak, go early.</p>
+          <div class="cost">¥7-23</div>
+        </article>
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="shanghai marriage market (people&#x27;s park) 人民公园相亲角 huangpu / people&#x27;s park shanghai ig reel · @ cqwdaodkozav · high confidence — parents display their adult children&#x27;s profiles on umbrellas, sat-sun ~12:00-17:00, weather-dependent. metro people&#x27;s square; observe respectfully, it&#x27;s not a performance. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Shanghai Marriage Market (People&#x27;s Park)</h3>
+          <div class="zh-title">人民公园相亲角</div>
+          <div class="where">Huangpu / People&#x27;s Park · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区人民公园</div><div class="en">People&#x27;s Park, near Gate 5, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.473115,31.232135&amp;name=Shanghai%20Marriage%20Market%20%28People%27s%20Park%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%BA%E6%B0%91%E5%85%AC%E5%9B%AD%E7%9B%B8%E4%BA%B2%E8%A7%92" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/C7JlTrEoaZ8/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ cqwdaodkozav · high confidence — Parents display their adult children&#x27;s profiles on umbrellas, Sat-Sun ~12:00-17:00, weather-dependent. Metro People&#x27;s Square; observe respectfully, it&#x27;s not a performance.</p>
+          <div class="cost">Free</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="shu cai ji (zhejiang middle rd) 舒蔡记 huangpu / people&#x27;s square shanghai ig reel · @ insta.noodls · high confidence — pan-fried shengjian bao and guotie potstickers — crispy bottoms, juicy pork broth inside. hole-in-the-wall since 1980; ~490m from people&#x27;s square station exit 3. expect a queue. 特色生煎; 咸肉菜饭; 鲜肉锅贴">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Shu Cai Ji (Zhejiang Middle Rd)</h3>
+          <div class="zh-title">舒蔡记</div>
+          <div class="where">Huangpu / People&#x27;s Square · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区浙江中路120号</div><div class="en">120 Middle Zhejiang Rd, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.480091,31.231972&amp;name=Shu%20Cai%20Ji%20%28Zhejiang%20Middle%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/127736823" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%88%92%E8%94%A1%E8%AE%B0" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DYSKmnUuEKE/" target="_blank" rel="noopener">IG</a></div>
+          <p class="order"><b>Order:</b> 特色生煎; 咸肉菜饭; 鲜肉锅贴</p>
+          <p class="notes">IG reel · @ insta.noodls · high confidence — Pan-fried shengjian bao and guotie potstickers — crispy bottoms, juicy pork broth inside. Hole-in-the-wall since 1980; ~490m from People&#x27;s Square station Exit 3. Expect a queue.</p>
+          <div class="cost">¥10 (~$1.50) for 4 buns</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="da hu chun (sichuan middle rd) 大壶春 huangpu / sichuan middle rd shanghai ig reel · @ ankat_eats · high confidence — since 1932, michelin bib gourmand old-style yeasted shengjian bao — fluffy, crisp sesame base, light broth; add curry beef vermicelli soup. 06:30-19:30; arrive before 08:30 to skip the queue. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Da Hu Chun (Sichuan Middle Rd)</h3>
+          <div class="zh-title">大壶春</div>
+          <div class="where">Huangpu / Sichuan Middle Rd · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区四川中路136号</div><div class="en">136 Middle Sichuan Rd, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.489204,31.234697&amp;name=Da%20Hu%20Chun%20%28Sichuan%20Middle%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%A4%A7%E5%A3%B6%E6%98%A5" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DRidgtVEvxg/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ ankat_eats · high confidence — Since 1932, Michelin Bib Gourmand old-style yeasted shengjian bao — fluffy, crisp sesame base, light broth; add curry beef vermicelli soup. 06:30-19:30; arrive before 08:30 to skip the queue.</p>
+          <div class="cost">¥11 for 4 buns; ~¥25-40 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="sheng yong xing (the bund) 晟永兴 huangpu / the bund shanghai ig reel · @ eatingwithedmund · high confidence — 1 michelin star peking duck: 45-day ducks roasted over jujube wood, carved tableside; whole duck ~¥500. book ahead; 11:30-14:00, 17:00-21:00. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Sheng Yong Xing (The Bund)</h3>
+          <div class="zh-title">晟永兴</div>
+          <div class="where">Huangpu / The Bund · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区广东路20号外滩5号5楼</div><div class="en">5F, Bund 5, 20 Guangdong Rd, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.49074,31.234375&amp;name=Sheng%20Yong%20Xing%20%28The%20Bund%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%99%9F%E6%B0%B8%E5%85%B4" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DQIgqJ7j7AJ/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ eatingwithedmund · high confidence — 1 Michelin star Peking duck: 45-day ducks roasted over jujube wood, carved tableside; whole duck ~¥500. Book ahead; 11:30-14:00, 17:00-21:00.</p>
+          <div class="cost">¥397 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lai lai xiao long bao (tianjin rd) 莱莱小笼 huangpu / tianjin rd (people&#x27;s square) shanghai ig reel · @ nom_life · high confidence — michelin bib gourmand original shop; crab roe xiaolongbao and fried pork chop. expect a long queue; 08:00-14:00, 15:00-20:00. some listings give 504 tianjin rd. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Lai Lai Xiao Long Bao (Tianjin Rd)</h3>
+          <div class="zh-title">莱莱小笼</div>
+          <div class="where">Huangpu / Tianjin Rd (People&#x27;s Square) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区天津路506号</div><div class="en">506 Tianjin Rd, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.477202,31.236001&amp;name=Lai%20Lai%20Xiao%20Long%20Bao%20%28Tianjin%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%8E%B1%E8%8E%B1%E5%B0%8F%E7%AC%BC" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DZEQtwospv6/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ nom_life · high confidence — Michelin Bib Gourmand original shop; crab roe xiaolongbao and fried pork chop. Expect a long queue; 08:00-14:00, 15:00-20:00. Some listings give 504 Tianjin Rd.</p>
+          <div class="cost">¥30-70 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="wei xiang zhai (yandang rd) 味香斋 huangpu / yandang rd (xintiandi) shanghai ig reel · @ imstillhungry_ · high confidence — michelin bib gourmand sesame-sauce noodles (麻酱面) with spicy minced pork, plus curry beef soup; also fried pork chop. 06:30-21:00; go before 11:30 or after 13:30 to skip the queue. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Wei Xiang Zhai (Yandang Rd)</h3>
+          <div class="zh-title">味香斋</div>
+          <div class="where">Huangpu / Yandang Rd (Xintiandi) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市黄浦区雁荡路14号</div><div class="en">14 Yandang Rd, Huangpu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.469898,31.22083&amp;name=Wei%20Xiang%20Zhai%20%28Yandang%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%91%B3%E9%A6%99%E6%96%8B" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DfEqX7QsJXU/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ imstillhungry_ · high confidence — Michelin Bib Gourmand sesame-sauce noodles (麻酱面) with spicy minced pork, plus curry beef soup; also fried pork chop. 06:30-21:00; go before 11:30 or after 13:30 to skip the queue.</p>
+          <div class="cost">¥15-30 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="obscura obscura jing&#x27;an shanghai chef/ownership changed in 2025; confirm. 10-course set; menus change">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Obscura</h3>
           <div class="zh-title">Obscura</div>
           <div class="where">Jing&#x27;an · Shanghai</div>
           <div class="addr"><div class="zh">西康路538号</div><div class="en">Tangxiang Cultural Space, 538 Xikang Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.447075,31.234289&amp;name=Obscura&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=Obscura" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=Obscura" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 10-course set; menus change</p>
           <p class="notes">Chef/ownership changed in 2025; confirm.</p>
           <div class="cost">¥1,780 + pairing</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.218587" data-lng="121.446036" data-search="three hundred cups 三佰杯（华山路） jing&#x27;an shanghai hard on weekends; avoid scalpers. 十八斩; 油淋呛河虾">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="three hundred cups 三佰杯（华山路） jing&#x27;an shanghai hard on weekends; avoid scalpers. 十八斩; 油淋呛河虾">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Three Hundred Cups</h3>
           <div class="zh-title">三佰杯（华山路）</div>
           <div class="where">Jing&#x27;an · Shanghai</div>
           <div class="addr"><div class="zh">华山路328号</div><div class="en">328 Huashan Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.446036,31.218587&amp;name=Three%20Hundred%20Cups&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%89%E4%BD%B0%E6%9D%AF%EF%BC%88%E5%8D%8E%E5%B1%B1%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%89%E4%BD%B0%E6%9D%AF%EF%BC%88%E5%8D%8E%E5%B1%B1%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 十八斩; 油淋呛河虾</p>
           <p class="notes">Hard on weekends; avoid scalpers.</p>
           <div class="cost">~¥257 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.226304" data-lng="121.457896" data-search="fabula fabula jing&#x27;an shanghai michelin-listed; deposit; closed mon/tue. set only; ~9 courses">
-          <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">Guide</span></div>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="fabula fabula jing&#x27;an shanghai michelin-listed; deposit; closed mon/tue. set only; ~9 courses">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>fabula</h3>
           <div class="zh-title">fabula</div>
           <div class="where">Jing&#x27;an · Shanghai</div>
           <div class="addr"><div class="zh">威海路720号</div><div class="en">2-3F, 720 Weihai Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.457896,31.226304&amp;name=fabula&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=fabula" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=fabula" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Set only; ~9 courses</p>
           <p class="notes">MICHELIN-listed; deposit; closed Mon/Tue.</p>
           <div class="cost">~¥1,280 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.218769" data-lng="121.424751" data-search="2乙 tavern · alley1293 2乙酒馆·alley1293（愚园路） jing&#x27;an / changning shanghai small tavern; book far ahead for fri/sat. vitello tonnato; charcoal beef tongue; octopus">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="2乙 tavern · alley1293 2乙酒馆·alley1293（愚园路） jing&#x27;an / changning shanghai small tavern; book far ahead for fri/sat. vitello tonnato; charcoal beef tongue; octopus">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>2乙 Tavern · Alley1293</h3>
           <div class="zh-title">2乙酒馆·Alley1293（愚园路）</div>
           <div class="where">Jing&#x27;an / Changning · Shanghai</div>
           <div class="addr"><div class="zh">愚园路1293弄</div><div class="en">Lane 1293 Yuyuan Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.424751,31.218769&amp;name=2%E4%B9%99%20Tavern%20%C2%B7%20Alley1293&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1643222686" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=2%E4%B9%99%E9%85%92%E9%A6%86%C2%B7Alley1293%EF%BC%88%E6%84%9A%E5%9B%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/1643222686" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=2%E4%B9%99%E9%85%92%E9%A6%86%C2%B7Alley1293%EF%BC%88%E6%84%9A%E5%9B%AD%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Vitello tonnato; charcoal beef tongue; octopus</p>
           <p class="notes">Small tavern; book far ahead for Fri/Sat.</p>
           <div class="cost">Not verified</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.221614" data-lng="121.436116" data-search="fu 1088 福1088 jing&#x27;an / changning shanghai 1920s villa; private rooms. 清炒蟹粉; smoked mackerel; river shrimp">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="fu 1088 福1088 jing&#x27;an / changning shanghai 1920s villa; private rooms. 清炒蟹粉; smoked mackerel; river shrimp">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Fu 1088</h3>
           <div class="zh-title">福1088</div>
           <div class="where">Jing&#x27;an / Changning · Shanghai</div>
           <div class="addr"><div class="zh">镇宁路375号</div><div class="en">375 Zhenning Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.436116,31.221614&amp;name=Fu%201088&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/2313757" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%A6%8F1088" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/2313757" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%A6%8F1088" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 清炒蟹粉; smoked mackerel; river shrimp</p>
           <p class="notes">1920s villa; private rooms.</p>
           <div class="cost">~¥550-600 pp</div>
         </article>
-        <article class="card event" data-type="Event" data-lat="31.196152" data-lng="121.483887" data-search="argy presents neworld (camelphat, omiki, final request)  jumen rd / huangpu shanghai real-name ticketing, id checked, non-refundable. same night as ins land. ">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="chao wei wei mian guan 潮味味面馆 jing&#x27;an / menggu rd (qufu rd) shanghai ig reel · @ shanghaiharvey · medium confidence — tiny 8-seat mom-and-pop chaoshan shop in the back of an apartment block; beef tendon rice noodles (guo tiao) with shrimp, meatballs and fish cake. address confirmed by an independent blog, not in the reel itself (creator dms the location). ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Chao Wei Wei Mian Guan</h3>
+          <div class="zh-title">潮味味面馆</div>
+          <div class="where">Jing&#x27;an / Menggu Rd (Qufu Rd) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市静安区蒙古路28弄1号101室</div><div class="en">Room 101, Building 1, Lane 28, Menggu Rd, Jing&#x27;an District (near North Xizang Rd)</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.470587,31.243155&amp;name=Chao%20Wei%20Wei%20Mian%20Guan&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%BD%AE%E5%91%B3%E5%91%B3%E9%9D%A2%E9%A6%86" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DdAUfHfT9L_/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ shanghaiharvey · medium confidence — Tiny 8-seat mom-and-pop Chaoshan shop in the back of an apartment block; beef tendon rice noodles (guo tiao) with shrimp, meatballs and fish cake. Address confirmed by an independent blog, not in the reel itself (creator DMs the location).</p>
+          <div class="cost">¥25-40 per dish</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="xie san bao (nanjing west rd) 蟹叁宝 jing&#x27;an / nanhui rd shanghai ig reel · @ chinatravel.club · high confidence — crab roe noodles or crab roe rice — rich, creamy, spoonable topping; also crab xiaolongbao and spring rolls. 340m from nanjing west rd station exit 1. some posts list no. 72; guides consistently say 74. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Xie San Bao (Nanjing West Rd)</h3>
+          <div class="zh-title">蟹叁宝</div>
+          <div class="where">Jing&#x27;an / Nanhui Rd · Shanghai</div>
+          <div class="addr"><div class="zh">上海市静安区南汇路74号</div><div class="en">74 Nanhui Rd, Jing&#x27;an District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.456638,31.230148&amp;name=Xie%20San%20Bao%20%28Nanjing%20West%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%9F%B9%E5%8F%81%E5%AE%9D" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/p/C4A8vlgMqaT/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ chinatravel.club · high confidence — Crab roe noodles or crab roe rice — rich, creamy, spoonable topping; also crab xiaolongbao and spring rolls. 340m from Nanjing West Rd station Exit 1. Some posts list No. 72; guides consistently say 74.</p>
+          <div class="cost">¥150 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yu xing ji (weihai rd) 裕兴记 jing&#x27;an / weihai rd (nanjing west rd) shanghai ig reel · @ ankat_eats · medium confidence — suzhou-origin crab roe noodles (蟹黄面), also crab roe xiaolongbao and a giant crab roe soup dumpling drunk through a straw. reel names no branch; also a huangpu branch at 151 hubei rd. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Yu Xing Ji (Weihai Rd)</h3>
+          <div class="zh-title">裕兴记</div>
+          <div class="where">Jing&#x27;an / Weihai Rd (Nanjing West Rd) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市静安区威海路830号</div><div class="en">830 Weihai Rd, Jing&#x27;an District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.456207,31.225284&amp;name=Yu%20Xing%20Ji%20%28Weihai%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%A3%95%E5%85%B4%E8%AE%B0" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DRidgtVEvxg/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ ankat_eats · medium confidence — Suzhou-origin crab roe noodles (蟹黄面), also crab roe xiaolongbao and a giant crab roe soup dumpling drunk through a straw. Reel names no branch; also a Huangpu branch at 151 Hubei Rd.</p>
+          <div class="cost">¥100 pp</div>
+        </article>
+        <article class="card event" data-type="Event" data-lat="" data-lng="" data-search="argy presents neworld (camelphat, omiki, final request)  jumen rd / huangpu shanghai real-name ticketing, id checked, non-refundable. same night as ins land. ">
           <div class="meta"><span class="type">Event</span><span class="dist"></span></div>
           <h3>ARGY presents NEWORLD (CamelPhat, OMIKI, Final Request)</h3>
           <div class="zh-title"></div>
@@ -435,18 +822,18 @@
           <p class="notes">Real-name ticketing, ID checked, non-refundable. Same night as INS Land.</p>
           <div class="cost">¥488-588</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.179003" data-lng="121.503600" data-search="xing xing hai pai benbang (manle city) 兴兴·海派本帮菜（漫乐城店） pudong shanghai residential mall; ask about deposits. 响油鳝丝; 熟醉大头虾; 白斩鸡; 红烧肉">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="xing xing hai pai benbang (manle city) 兴兴·海派本帮菜（漫乐城店） pudong shanghai residential mall; ask about deposits. 响油鳝丝; 熟醉大头虾; 白斩鸡; 红烧肉">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Xing Xing Hai Pai Benbang (Manle City)</h3>
+          <h3>Xing Xing Hai Pai Benbang (Manle City)</h3><img class="photo" src="https://p0.meituan.net/biztone/171535098_1683960276157.jpeg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">兴兴·海派本帮菜（漫乐城店）</div>
           <div class="where">Pudong · Shanghai</div>
           <div class="addr"><div class="zh">齐河路258号漫乐城3楼</div><div class="en">L305-308 3F Manle City, 258 Qihe Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.5036,31.179003&amp;name=Xing%20Xing%20Hai%20Pai%20Benbang%20%28Manle%20City%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/104545162" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%B4%E5%85%B4%C2%B7%E6%B5%B7%E6%B4%BE%E6%9C%AC%E5%B8%AE%E8%8F%9C%EF%BC%88%E6%BC%AB%E4%B9%90%E5%9F%8E%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/104545162" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%85%B4%E5%85%B4%C2%B7%E6%B5%B7%E6%B4%BE%E6%9C%AC%E5%B8%AE%E8%8F%9C%EF%BC%88%E6%BC%AB%E4%B9%90%E5%9F%8E%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 响油鳝丝; 熟醉大头虾; 白斩鸡; 红烧肉</p>
           <p class="notes">Residential mall; ask about deposits.</p>
           <div class="cost">¥169 pp</div>
         </article>
-        <article class="card nearby" data-type="Nearby" data-lat="31.242012" data-lng="121.487772" data-search="breadful days market (rockbund) 有有市集 rockbund / huangpu shanghai ticketed per a vendor post. verify hours and price. walkable from the hotel area. ">
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="breadful days market (rockbund) 有有市集 rockbund / huangpu shanghai ticketed per a vendor post. verify hours and price. walkable from the hotel area. ">
           <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
           <h3>Breadful Days market (Rockbund)</h3>
           <div class="zh-title">有有市集</div>
@@ -457,134 +844,288 @@
           <p class="notes">Ticketed per a vendor post. Verify hours and price. Walkable from the hotel area.</p>
           
         </article>
-        <article class="card food" data-type="Food" data-lat="31.210840" data-lng="121.457992" data-search="eight / under eight「下」under xuhui shanghai eight-seat counter; confirm still open. no fixed menu; chef&#x27;s choice">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="eight / under eight「下」under xuhui shanghai eight-seat counter; confirm still open. no fixed menu; chef&#x27;s choice">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>EIGHT / UNDER</h3>
           <div class="zh-title">EIGHT「下」UNDER</div>
           <div class="where">Xuhui · Shanghai</div>
           <div class="addr"><div class="zh">永康路73号</div><div class="en">73 Yongkang Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.457992,31.21084&amp;name=EIGHT%20/%20UNDER&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=EIGHT%E3%80%8C%E4%B8%8B%E3%80%8DUNDER" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=EIGHT%E3%80%8C%E4%B8%8B%E3%80%8DUNDER" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> No fixed menu; chef&#x27;s choice</p>
           <p class="notes">Eight-seat counter; confirm still open.</p>
           <div class="cost">~¥888 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.204962" data-lng="121.457404" data-search="jianguo 328 建国328小馆 xuhui shanghai tiny room; shared tables. 红烧肉; 酱爆猪肝; 黄鱼春卷; 葱油拌面">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="jianguo 328 建国328小馆 xuhui shanghai tiny room; shared tables. 红烧肉; 酱爆猪肝; 黄鱼春卷; 葱油拌面">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Jianguo 328</h3>
+          <h3>Jianguo 328</h3><img class="photo" src="https://p0.meituan.net/biztone/767153c3bac43bb27469192b46dc21d5387408.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">建国328小馆</div>
           <div class="where">Xuhui · Shanghai</div>
           <div class="addr"><div class="zh">建国西路328号</div><div class="en">328 Jianguo West Rd, near Xiangyang South Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.457404,31.204962&amp;name=Jianguo%20328&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/6100520" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%BB%BA%E5%9B%BD328%E5%B0%8F%E9%A6%86" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/6100520" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%BB%BA%E5%9B%BD328%E5%B0%8F%E9%A6%86" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 红烧肉; 酱爆猪肝; 黄鱼春卷; 葱油拌面</p>
           <p class="notes">Tiny room; shared tables.</p>
           <div class="cost">¥96 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.201713" data-lng="121.458100" data-search="ren he guan (zhaojiabang rd) 人和馆（肇嘉浜路） xuhui shanghai crab rice can sell out; lunch easier. 蟹粉捞饭; fried shredded eel">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="ren he guan (zhaojiabang rd) 人和馆（肇嘉浜路） xuhui shanghai crab rice can sell out; lunch easier. 蟹粉捞饭; fried shredded eel">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Ren He Guan (Zhaojiabang Rd)</h3>
           <div class="zh-title">人和馆（肇嘉浜路）</div>
           <div class="where">Xuhui · Shanghai</div>
           <div class="addr"><div class="zh">肇嘉浜路407号</div><div class="en">407 Zhaojiabang Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.4581,31.201713&amp;name=Ren%20He%20Guan%20%28Zhaojiabang%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/17182037" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%BA%E5%92%8C%E9%A6%86%EF%BC%88%E8%82%87%E5%98%89%E6%B5%9C%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/17182037" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%BA%E5%92%8C%E9%A6%86%EF%BC%88%E8%82%87%E5%98%89%E6%B5%9C%E8%B7%AF%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 蟹粉捞饭; fried shredded eel</p>
           <p class="notes">Crab rice can sell out; lunch easier.</p>
           <div class="cost">~¥250 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="31.190514" data-lng="121.443553" data-search="yi jia yi yan (nandan east rd) 忆家一宴（南丹东路总店） xuhui / xujiahui shanghai two seatings; confirm hours. 黄鱼煨面; stuffed eggplant; benbang cold dishes">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yeren mr. gelato (donghu rd flagship) 野人先生 xuhui / donghu rd shanghai ig reel · @ vancouverfoodie · medium confidence — chinese gelato flagship; pistachio gelato with espresso affogato in an edible waffle cup, plus wuchang rice and honey jasmine flavours. reel says bogo at 9pm. reel names no branch — donghu lu flagship is the best-documented location; a bund branch also exists. ">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
-          <h3>Yi Jia Yi Yan (Nandan East Rd)</h3>
+          <h3>Yeren Mr. Gelato (Donghu Rd flagship)</h3>
+          <div class="zh-title">野人先生</div>
+          <div class="where">Xuhui / Donghu Rd · Shanghai</div>
+          <div class="addr"><div class="zh">上海市徐汇区东湖路30号</div><div class="en">30 Donghu Rd, Xuhui District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.4546,31.216189&amp;name=Yeren%20Mr.%20Gelato%20%28Donghu%20Rd%20flagship%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%87%8E%E4%BA%BA%E5%85%88%E7%94%9F" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DX-XNFOv2O-/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ vancouverfoodie · medium confidence — Chinese gelato flagship; pistachio gelato with espresso affogato in an edible waffle cup, plus Wuchang rice and honey jasmine flavours. Reel says BOGO at 9pm. Reel names no branch — Donghu Lu flagship is the best-documented location; a Bund branch also exists.</p>
+          <div class="cost">¥58 (pistachio affogato cone)</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="old jesse (tianping rd) 老吉士 xuhui / tianping rd (french concession) shanghai ig reel · @ ankat_eats · high confidence — classic benbang shanghainese since 1990; hongshao rou (red-braised pork) and carp head with spring onion. book 5-7 days ahead by phone; walk-ins often turned away. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Old Jesse (Tianping Rd)</h3>
+          <div class="zh-title">老吉士</div>
+          <div class="where">Xuhui / Tianping Rd (French Concession) · Shanghai</div>
+          <div class="addr"><div class="zh">上海市徐汇区天平路41号</div><div class="en">41 Tianping Rd, Xuhui District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=121.437935,31.203148&amp;name=Old%20Jesse%20%28Tianping%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%80%81%E5%90%89%E5%A3%AB" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DRidgtVEvxg/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ ankat_eats · high confidence — Classic benbang Shanghainese since 1990; hongshao rou (red-braised pork) and carp head with spring onion. Book 5-7 days ahead by phone; walk-ins often turned away.</p>
+          <div class="cost">¥150-250 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yi jia yi yan (nandan east rd) 忆家一宴（南丹东路总店） xuhui / xujiahui shanghai two seatings; confirm hours. 黄鱼煨面; stuffed eggplant; benbang cold dishes">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Yi Jia Yi Yan (Nandan East Rd)</h3><img class="photo" src="https://p0.meituan.net/biztone/6c8966925b3d66e64e49d6a9323b4ffb429852.jpg@750w_1e_1l|watermark=0.webp@format=png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <div class="zh-title">忆家一宴（南丹东路总店）</div>
           <div class="where">Xuhui / Xujiahui · Shanghai</div>
           <div class="addr"><div class="zh">南丹东路109号</div><div class="en">109 Nandan East Rd, Xujiahui Activity Center</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=121.443553,31.190514&amp;name=Yi%20Jia%20Yi%20Yan%20%28Nandan%20East%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/92752742" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%BF%86%E5%AE%B6%E4%B8%80%E5%AE%B4%EF%BC%88%E5%8D%97%E4%B8%B9%E4%B8%9C%E8%B7%AF%E6%80%BB%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/92752742" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%BF%86%E5%AE%B6%E4%B8%80%E5%AE%B4%EF%BC%88%E5%8D%97%E4%B8%B9%E4%B8%9C%E8%B7%AF%E6%80%BB%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 黄鱼煨面; stuffed eggplant; benbang cold dishes</p>
           <p class="notes">Two seatings; confirm hours.</p>
           <div class="cost">¥159 pp</div>
         </article></section><section class="day"><h2>Chengdu · tentative</h2>
-        <article class="card food" data-type="Food" data-lat="30.651319" data-lng="104.083972" data-search="ma&#x27;s kitchen (taikoo li) 马旺子·川小馆（太古里店） jinjiang chengdu queue forms at opening. 毛血旺; crispy fen zheng rou">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="ma&#x27;s kitchen (taikoo li) 马旺子·川小馆（太古里店） jinjiang chengdu queue forms at opening. 毛血旺; crispy fen zheng rou">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Ma&#x27;s Kitchen (Taikoo Li)</h3>
           <div class="zh-title">马旺子·川小馆（太古里店）</div>
           <div class="where">Jinjiang · Chengdu</div>
           <div class="addr"><div class="zh">康市街1号</div><div class="en">1 East Kangshi St, by Taikoo Li</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=104.083972,30.651319&amp;name=Ma%27s%20Kitchen%20%28Taikoo%20Li%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/58137369" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%A9%AC%E6%97%BA%E5%AD%90%C2%B7%E5%B7%9D%E5%B0%8F%E9%A6%86%EF%BC%88%E5%A4%AA%E5%8F%A4%E9%87%8C%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/58137369" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%A9%AC%E6%97%BA%E5%AD%90%C2%B7%E5%B7%9D%E5%B0%8F%E9%A6%86%EF%BC%88%E5%A4%AA%E5%8F%A4%E9%87%8C%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 毛血旺; crispy fen zheng rou</p>
           <p class="notes">Queue forms at opening.</p>
           <div class="cost">~¥119 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="30.662742" data-lng="104.034225" data-search="chen mapo tofu 陈麻婆豆腐（青华路店） qingyang chengdu casual lunch; no booking. original mapo tofu; catfish mapo; lotus-leaf pork">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="chen mapo tofu 陈麻婆豆腐（青华路店） qingyang chengdu casual lunch; no booking. original mapo tofu; catfish mapo; lotus-leaf pork">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">Bib Gourmand</span></div>
           <h3>Chen Mapo Tofu</h3>
           <div class="zh-title">陈麻婆豆腐（青华路店）</div>
           <div class="where">Qingyang · Chengdu</div>
           <div class="addr"><div class="zh">青华路10号</div><div class="en">No.10-12, 10 Qinghua Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=104.034225,30.662742&amp;name=Chen%20Mapo%20Tofu&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%99%88%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%88%E9%9D%92%E5%8D%8E%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%99%88%E9%BA%BB%E5%A9%86%E8%B1%86%E8%85%90%EF%BC%88%E9%9D%92%E5%8D%8E%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Original mapo tofu; catfish mapo; lotus-leaf pork</p>
           <p class="notes">Casual lunch; no booking.</p>
           <div class="cost">Budget</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="30.666764" data-lng="104.058706" data-search="yu zhi lan 玉芝兰（长发街店） qingyang chengdu unsigned; tiny room; deposit reported. golden thread noodles; market set menu">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yu zhi lan 玉芝兰（长发街店） qingyang chengdu unsigned; tiny room; deposit reported. golden thread noodles; market set menu">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">2★</span></div>
           <h3>Yu Zhi Lan</h3>
           <div class="zh-title">玉芝兰（长发街店）</div>
           <div class="where">Qingyang · Chengdu</div>
           <div class="addr"><div class="zh">长发街24号</div><div class="en">No.1, 24 Changfa St</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=104.058706,30.666764&amp;name=Yu%20Zhi%20Lan&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/5423060" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8E%89%E8%8A%9D%E5%85%B0%EF%BC%88%E9%95%BF%E5%8F%91%E8%A1%97%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/5423060" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8E%89%E8%8A%9D%E5%85%B0%EF%BC%88%E9%95%BF%E5%8F%91%E8%A1%97%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Golden thread noodles; market set menu</p>
           <p class="notes">Unsigned; tiny room; deposit reported.</p>
           <div class="cost">~¥1,891 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="30.646510" data-lng="104.058070" data-search="china samite hot pot 锦城印象火锅（彩虹店） wuhou chengdu very spicy; ask for 微辣. spicy beef-fat broth; goose intestines; 冰粉">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="sanchuanting conveyor bbq &amp; hotpot (tianfu square) 叄川町·旋转烤肉·自助小火锅(天府广场店) qingyang / tianfu square chengdu ig reel · @ jm_backpackers · medium confidence — ¥49 all-you-can-eat conveyor-belt sichuan bbq + mala hotpot. pork belly, steak, ramen, enoki, sausages; fried chicken and red-bean mochi. creator rated 9/10, very spicy. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Sanchuanting Conveyor BBQ &amp; Hotpot (Tianfu Square)</h3>
+          <div class="zh-title">叄川町·旋转烤肉·自助小火锅(天府广场店)</div>
+          <div class="where">Qingyang / Tianfu Square · Chengdu</div>
+          <div class="addr"><div class="zh">成都市青羊区博物馆路21号B60号天府广场负一层今站购物中心</div><div class="en">B60, B1, Jinzhan Shopping Center, 21 Bowuguan Rd, Tianfu Square (Metro Exit C, next to McDonald&#x27;s)</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=104.065873,30.657367&amp;name=Sanchuanting%20Conveyor%20BBQ%20%26%20Hotpot%20%28Tianfu%20Square%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8F%84%E5%B7%9D%E7%94%BA%C2%B7%E6%97%8B%E8%BD%AC%E7%83%A4%E8%82%89%C2%B7%E8%87%AA%E5%8A%A9%E5%B0%8F%E7%81%AB%E9%94%85%28%E5%A4%A9%E5%BA%9C%E5%B9%BF%E5%9C%BA%E5%BA%97%29" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DeskQ7ZSPGS/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ jm_backpackers · medium confidence — ¥49 all-you-can-eat conveyor-belt Sichuan BBQ + mala hotpot. Pork belly, steak, ramen, enoki, sausages; fried chicken and red-bean mochi. Creator rated 9/10, very spicy.</p>
+          <div class="cost">¥49 pp AYCE</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="su xiao meng beef patty (mon beef roti) 酥小蒙牛肉饼店(天府广场店) qingyang / tianfu square, xiyu st chengdu ig reel · @ carbsmakeitokay · medium confidence — handmade beef guokui/roti, flaky, beef with scallion and spice, on the halal street by huangcheng mosque. expect a queue; 07:30-20:30. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Su Xiao Meng Beef Patty (Mon Beef Roti)</h3>
+          <div class="zh-title">酥小蒙牛肉饼店(天府广场店)</div>
+          <div class="where">Qingyang / Tianfu Square, Xiyu St · Chengdu</div>
+          <div class="addr"><div class="zh">成都市青羊区西御街皇城清真寺旁</div><div class="en">Xiyu St, beside Huangcheng Mosque, near Tianfu Square</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=104.062909,30.65671&amp;name=Su%20Xiao%20Meng%20Beef%20Patty%20%28Mon%20Beef%20Roti%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%85%A5%E5%B0%8F%E8%92%99%E7%89%9B%E8%82%89%E9%A5%BC%E5%BA%97%28%E5%A4%A9%E5%BA%9C%E5%B9%BF%E5%9C%BA%E5%BA%97%29" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DfAQ1PdKfZ8/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ carbsmakeitokay · medium confidence — Handmade beef guokui/roti, flaky, beef with scallion and spice, on the halal street by Huangcheng Mosque. Expect a queue; 07:30-20:30.</p>
+          <div class="cost">¥6</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="china samite hot pot 锦城印象火锅（彩虹店） wuhou chengdu very spicy; ask for 微辣. spicy beef-fat broth; goose intestines; 冰粉">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">Guide</span></div>
           <h3>China Samite Hot Pot</h3>
           <div class="zh-title">锦城印象火锅（彩虹店）</div>
           <div class="where">Wuhou · Chengdu</div>
           <div class="addr"><div class="zh">武侯祠大街19号</div><div class="en">No.94, 19 Wuhouci St</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=104.05807,30.64651&amp;name=China%20Samite%20Hot%20Pot&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/2910745" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%94%A6%E5%9F%8E%E5%8D%B0%E8%B1%A1%E7%81%AB%E9%94%85%EF%BC%88%E5%BD%A9%E8%99%B9%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/2910745" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%94%A6%E5%9F%8E%E5%8D%B0%E8%B1%A1%E7%81%AB%E9%94%85%EF%BC%88%E5%BD%A9%E8%99%B9%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Spicy beef-fat broth; goose intestines; 冰粉</p>
           <p class="notes">Very spicy; ask for 微辣.</p>
           <div class="cost">~¥126 pp</div>
         </article></section><section class="day"><h2>Chongqing · tentative</h2>
-        <article class="card food" data-type="Food" data-lat="28.889514" data-lng="105.417031" data-search="yanshe hotpot ryori (nanbin rd) 滟设火锅料理（南滨路店） nanan chongqing black pearl 1 diamond; no michelin. split pot; marbled beef; tripe">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="lao ganjia crawfish &amp; jianghu cuisine (yanghe flagship) 老甘家小龙虾江湖菜(洋河地标总店) jiangbei / guanyinqiao, yanghe rd chongqing ig reel · @ foodiswhyimbroke · high confidence — garlic-butter jumbo crawfish (the reel&#x27;s pick) and mala crawfish, plus geleshan spicy chicken and crispy yellow throat. 6 years on dianping&#x27;s must-eat list; queues from 5pm, ~30-min wait in reel. hongyadong branch at daijia alley 16 if staying central. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Lao Ganjia Crawfish &amp; Jianghu Cuisine (Yanghe Flagship)</h3>
+          <div class="zh-title">老甘家小龙虾江湖菜(洋河地标总店)</div>
+          <div class="where">Jiangbei / Guanyinqiao, Yanghe Rd · Chongqing</div>
+          <div class="addr"><div class="zh">重庆市江北区洋河中路91号</div><div class="en">91 Yanghe Middle Rd, near Guanyinqiao, Jiangbei District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=106.539804,29.582876&amp;name=Lao%20Ganjia%20Crawfish%20%26%20Jianghu%20Cuisine%20%28Yanghe%20Flagship%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%80%81%E7%94%98%E5%AE%B6%E5%B0%8F%E9%BE%99%E8%99%BE%E6%B1%9F%E6%B9%96%E8%8F%9C%28%E6%B4%8B%E6%B2%B3%E5%9C%B0%E6%A0%87%E6%80%BB%E5%BA%97%29" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DfgNxk-InOT/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ foodiswhyimbroke · high confidence — Garlic-butter jumbo crawfish (the reel&#x27;s pick) and mala crawfish, plus Geleshan spicy chicken and crispy yellow throat. 6 years on Dianping&#x27;s Must-Eat list; queues from 5pm, ~30-min wait in reel. Hongyadong branch at Daijia Alley 16 if staying central.</p>
+          <div class="cost">¥105 pp; jumbo crawfish ~¥28 each</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="luori yechaji (sunset wild tea house) 落日野茶集 nan&#x27;an / longmenhao, tushan rd chongqing ig reel · @ lifewithelliott · low confidence — viral sunset teahouse/hotpot terrace over the yuzhong skyline; go ~1 hr before sunset, walk-in only. multiple reports incl. the creator say it has since closed — verify before going. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="flag">Check first — may be closed</span></div>
+          <h3>Luori Yechaji (Sunset Wild Tea House)</h3>
+          <div class="zh-title">落日野茶集</div>
+          <div class="where">Nan&#x27;an / Longmenhao, Tushan Rd · Chongqing</div>
+          <div class="addr"><div class="zh">重庆市南岸区涂山路182号</div><div class="en">182 Tushan Rd, Nan&#x27;an District, near Longmenhao / Xiahaoli</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=106.600152,29.558259&amp;name=Luori%20Yechaji%20%28Sunset%20Wild%20Tea%20House%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%90%BD%E6%97%A5%E9%87%8E%E8%8C%B6%E9%9B%86" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DJ6o6eAT6US/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ lifewithelliott · low confidence — Viral sunset teahouse/hotpot terrace over the Yuzhong skyline; go ~1 hr before sunset, walk-in only. Multiple reports incl. the creator say it has since CLOSED — verify before going.</p>
+          <div class="cost">¥150 tea set for 2; BBQ set ¥350</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="xiaoshulin live 小树啉live nan&#x27;an / nanbin rd, haitang yanyu park chongqing ig reel · @ traveltochina666 · medium confidence — riverside live-music bar/restaurant with a wave-projection floor and yangtze views at dusk. 11:00-00:30. also listed at a hilltop site near luori yechaji — confirm the branch on amap. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Xiaoshulin Live</h3>
+          <div class="zh-title">小树啉live</div>
+          <div class="where">Nan&#x27;an / Nanbin Rd, Haitang Yanyu Park · Chongqing</div>
+          <div class="addr"><div class="zh">重庆市南岸区海棠溪烟雨公园B区18-22商铺</div><div class="en">Shops 18-22, Area B, Haitangxi Yanyu Park, Nanbin Rd</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=106.586944,29.54367&amp;name=Xiaoshulin%20Live&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%B0%8F%E6%A0%91%E5%95%89live" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DeTVZ9Pho-_/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ traveltochina666 · medium confidence — Riverside live-music bar/restaurant with a wave-projection floor and Yangtze views at dusk. 11:00-00:30. Also listed at a hilltop site near Luori Yechaji — confirm the branch on Amap.</p>
+          <div class="cost">¥83 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="pipa yuan shiweixian hotpot (nanshan) 枇杷园食为鲜火锅(南山总店) nan&#x27;an / nanshan, jinzhu village chongqing ig reel · @ graemedyk · high confidence — guinness world record largest hotpot restaurant: 5,851 seats, 888 tables terraced up a loquat-covered hillside. yuanyang pot; duck intestines and coriander meatballs. 09:00-00:00, book ahead, go by taxi. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Pipa Yuan Shiweixian Hotpot (Nanshan)</h3>
+          <div class="zh-title">枇杷园食为鲜火锅(南山总店)</div>
+          <div class="where">Nan&#x27;an / Nanshan, Jinzhu Village · Chongqing</div>
+          <div class="addr"><div class="zh">重庆市南岸区南山街道金竹村龙井榜社</div><div class="en">Wenfeng Zhengjie Old Factory, Jinzhu Village, Nanshan</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=106.602307,29.50446&amp;name=Pipa%20Yuan%20Shiweixian%20Hotpot%20%28Nanshan%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%9E%87%E6%9D%B7%E5%9B%AD%E9%A3%9F%E4%B8%BA%E9%B2%9C%E7%81%AB%E9%94%85%28%E5%8D%97%E5%B1%B1%E6%80%BB%E5%BA%97%29" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DdSL6BsBdp-/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ graemedyk · high confidence — Guinness World Record largest hotpot restaurant: 5,851 seats, 888 tables terraced up a loquat-covered hillside. Yuanyang pot; duck intestines and coriander meatballs. 09:00-00:00, book ahead, go by taxi.</p>
+          <div class="cost">¥114 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="go nanshan night view hotpot park (nanshan cliff buffet hotpot) 去南山夜景火锅公园 nan&#x27;an / nanshan, zhenwushan chongqing ig reel · @ traveltochina666 · medium confidence — cliffside conveyor-belt buffet hotpot at ~681m, glass deck and sailboat terraces over the yuzhong peninsula. sunset-to-night is the point; 09:30-22:30. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Go Nanshan Night View Hotpot Park (Nanshan Cliff Buffet Hotpot)</h3>
+          <div class="zh-title">去南山夜景火锅公园</div>
+          <div class="where">Nan&#x27;an / Nanshan, Zhenwushan · Chongqing</div>
+          <div class="addr"><div class="zh">重庆市南岸区南山街道真武山88号</div><div class="en">88 Zhenwushan, Nanshan</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=106.627726,29.54569&amp;name=Go%20Nanshan%20Night%20View%20Hotpot%20Park%20%28Nanshan%20Cliff%20Buffet%20Hotpot%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1227035864" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8E%BB%E5%8D%97%E5%B1%B1%E5%A4%9C%E6%99%AF%E7%81%AB%E9%94%85%E5%85%AC%E5%9B%AD" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DeTVZ9Pho-_/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ traveltochina666 · medium confidence — Cliffside conveyor-belt buffet hotpot at ~681m, glass deck and sailboat terraces over the Yuzhong peninsula. Sunset-to-night is the point; 09:30-22:30.</p>
+          <div class="cost">¥109 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yanshe hotpot ryori (nanbin rd) 滟设火锅料理（南滨路店） nanan chongqing black pearl 1 diamond; no michelin. split pot; marbled beef; tripe">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Yanshe Hotpot Ryori (Nanbin Rd)</h3>
           <div class="zh-title">滟设火锅料理（南滨路店）</div>
           <div class="where">Nanan · Chongqing</div>
           <div class="addr"><div class="zh">南滨路</div><div class="en">4F Sunshine 100 Liangjiang No.1, Nanbin Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=105.417031,28.889514&amp;name=Yanshe%20Hotpot%20Ryori%20%28Nanbin%20Rd%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%BB%9F%E8%AE%BE%E7%81%AB%E9%94%85%E6%96%99%E7%90%86%EF%BC%88%E5%8D%97%E6%BB%A8%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%BB%9F%E8%AE%BE%E7%81%AB%E9%94%85%E6%96%99%E7%90%86%EF%BC%88%E5%8D%97%E6%BB%A8%E8%B7%AF%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Split pot; marbled beef; tripe</p>
           <p class="notes">Black Pearl 1 diamond; no Michelin.</p>
           <div class="cost">~¥488 pp</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="26.559046" data-lng="104.893336" data-search="peijie old hotpot (jiaochangkou) 珮姐老火锅（较场口创始店） yuzhong chongqing peak waits 1.5-2 hours. 屠场鲜毛肚; 麻辣牛肉; 贡菜丸子">
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="peijie old hotpot (jiaochangkou) 珮姐老火锅（较场口创始店） yuzhong chongqing peak waits 1.5-2 hours. 屠场鲜毛肚; 麻辣牛肉; 贡菜丸子">
           <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Peijie Old Hotpot (Jiaochangkou)</h3>
           <div class="zh-title">珮姐老火锅（较场口创始店）</div>
           <div class="where">Yuzhong · Chongqing</div>
           <div class="addr"><div class="zh">民生路5号</div><div class="en">5 Minsheng Rd, Jiefangbei / Jiaochangkou</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=104.893336,26.559046&amp;name=Peijie%20Old%20Hotpot%20%28Jiaochangkou%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/18393945" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8F%AE%E5%A7%90%E8%80%81%E7%81%AB%E9%94%85%EF%BC%88%E8%BE%83%E5%9C%BA%E5%8F%A3%E5%88%9B%E5%A7%8B%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/18393945" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8F%AE%E5%A7%90%E8%80%81%E7%81%AB%E9%94%85%EF%BC%88%E8%BE%83%E5%9C%BA%E5%8F%A3%E5%88%9B%E5%A7%8B%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> 屠场鲜毛肚; 麻辣牛肉; 贡菜丸子</p>
           <p class="notes">Peak waits 1.5-2 hours.</p>
           <div class="cost">~¥78 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="guo qiang beef (jiefangbei) 国强牛肉(解放碑店) yuzhong / jiefangbei, linjiang rd chongqing ig reel · @ immikeyu · high confidence — proper local spot with two kitchens. steamed dumplings, bone-marrow broth, sizzling eggplant and sichuan beef — all mala. 11:30-15:30, 17:00-22:30. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Guo Qiang Beef (Jiefangbei)</h3>
+          <div class="zh-title">国强牛肉(解放碑店)</div>
+          <div class="where">Yuzhong / Jiefangbei, Linjiang Rd · Chongqing</div>
+          <div class="addr"><div class="zh">重庆市渝中区临江路108号1-4室</div><div class="en">108 Linjiang Rd, Rooms 1-4, Yuzhong District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=106.571864,29.558562&amp;name=Guo%20Qiang%20Beef%20%28Jiefangbei%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%9B%BD%E5%BC%BA%E7%89%9B%E8%82%89%28%E8%A7%A3%E6%94%BE%E7%A2%91%E5%BA%97%29" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/De69JUvznDP/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ immikeyu · high confidence — Proper local spot with two kitchens. Steamed dumplings, bone-marrow broth, sizzling eggplant and Sichuan beef — all mala. 11:30-15:30, 17:00-22:30.</p>
+          <div class="cost">¥217 for 2 in reel (~¥108 pp)</div>
         </article></section><section class="day"><h2>Shenzhen · tentative</h2>
-        <article class="card food" data-type="Food" data-lat="22.539706" data-lng="114.110892" data-search="chao shang chao (mixc) 潮上潮（深圳万象城店） luohu shenzhen can tailor a menu to budget. fish maw with preserved radish; grilled conch">
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="huafa snow world (qianhai) 华发冰雪热雪奇迹 bao&#x27;an / qianhai shenzhen ig reel · @ jirehtzl · high confidence — world&#x27;s largest indoor ski centre (guinness), opened 29 sep 2025; 5 runs, 1,569m total, 83m vertical. metro line 20 convention city exit d. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Huafa Snow World (Qianhai)</h3>
+          <div class="zh-title">华发冰雪热雪奇迹</div>
+          <div class="where">Bao&#x27;an / Qianhai · Shenzhen</div>
+          <div class="addr"><div class="zh">宝安区滨江大道666号</div><div class="en">666 Binjiang Ave, Bao&#x27;an District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=113.770162,22.69952&amp;name=Huafa%20Snow%20World%20%28Qianhai%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%8D%8E%E5%8F%91%E5%86%B0%E9%9B%AA%E7%83%AD%E9%9B%AA%E5%A5%87%E8%BF%B9" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DQjbFGikzSF/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ jirehtzl · high confidence — World&#x27;s largest indoor ski centre (Guinness), opened 29 Sep 2025; 5 runs, 1,569m total, 83m vertical. Metro Line 20 Convention City Exit D.</p>
+          <div class="cost">From ¥208-300</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yes night stall (huaqiangbei) yes也是大排档 futian / huaqiangbei shenzhen ig reel · @ hkfoodcravers · medium confidence — seafood dai pai dong, open-wok cooking; signature cream shrimp with roe. 17:00-01:30, metro yannan exit c. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>YES Night Stall (Huaqiangbei)</h3>
+          <div class="zh-title">YES也是大排档</div>
+          <div class="where">Futian / Huaqiangbei · Shenzhen</div>
+          <div class="addr"><div class="zh">福田区华强北振华路50号中联大厦401栋L1-08-09</div><div class="en">L1-08-09, Bldg 401, Zhonglian Tower, 50 Zhenhua Rd, Huaqiangbei, Futian District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=114.09206,22.54504&amp;name=YES%20Night%20Stall%20%28Huaqiangbei%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=YES%E4%B9%9F%E6%98%AF%E5%A4%A7%E6%8E%92%E6%A1%A3" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DMxJz0Mz5w9/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ hkfoodcravers · medium confidence — Seafood dai pai dong, open-wok cooking; signature cream shrimp with roe. 17:00-01:30, Metro Yannan Exit C.</p>
+          <div class="cost">¥121-150 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="gem garden shenzhen 珍庭 futian / one avenue shenzhen ig reel · @ bettyshanghai · high confidence — teochew fine dining, black pearl 1 diamond; signature fish maw stuffed in roast goose, pre-order advised. 11:30-14:00, 17:30-22:00. ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
+          <h3>Gem Garden Shenzhen</h3>
+          <div class="zh-title">珍庭</div>
+          <div class="where">Futian / One Avenue · Shenzhen</div>
+          <div class="addr"><div class="zh">福田区福华路348号卓悦中心L239</div><div class="en">Unit L239, 1&amp;2/F, One Avenue Center, 348 Fuhua Rd, Futian District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=114.064791,22.535136&amp;name=Gem%20Garden%20Shenzhen&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E7%8F%8D%E5%BA%AD" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DVgDZbRjweC/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ bettyshanghai · high confidence — Teochew fine dining, Black Pearl 1 Diamond; signature fish maw stuffed in roast goose, pre-order advised. 11:30-14:00, 17:30-22:00.</p>
+          
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="chao shang chao (mixc) 潮上潮（深圳万象城店） luohu shenzhen can tailor a menu to budget. fish maw with preserved radish; grilled conch">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">1★</span></div>
           <h3>Chao Shang Chao (MixC)</h3>
           <div class="zh-title">潮上潮（深圳万象城店）</div>
           <div class="where">Luohu · Shenzhen</div>
           <div class="addr"><div class="zh">宝安南路1881号</div><div class="en">S368 3F Bldg B, MixC Phase 2, 1881 Bao&#x27;an South Rd</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=114.110892,22.539706&amp;name=Chao%20Shang%20Chao%20%28MixC%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://m.dianping.com/shop/1029294061" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%BD%AE%E4%B8%8A%E6%BD%AE%EF%BC%88%E6%B7%B1%E5%9C%B3%E4%B8%87%E8%B1%A1%E5%9F%8E%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://m.dianping.com/shop/1029294061" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E6%BD%AE%E4%B8%8A%E6%BD%AE%EF%BC%88%E6%B7%B1%E5%9C%B3%E4%B8%87%E8%B1%A1%E5%9F%8E%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Fish maw with preserved radish; grilled conch</p>
           <p class="notes">Can tailor a menu to budget.</p>
           <div class="cost">Special occasion</div>
         </article>
-        <article class="card food" data-type="Food" data-lat="22.506913" data-lng="113.942747" data-search="yun jing 云璟（鹏瑞莱佛士酒店） nanshan shenzhen ask for a window table. poached sunflower-seed chicken; mantis shrimp">
+        <article class="card nearby" data-type="Nearby" data-lat="" data-lng="" data-search="donggang city food &amp; spa club (luohu port) 东港城美食水疗会 luohu / luohu port shenzhen ig reel · @ hkfoodcravers · high confidence — 24-hr spa ~100m from luohu port, opened jan 2025; massage, baths, food, free lounge overnight stay. ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
+          <h3>Donggang City Food &amp; Spa Club (Luohu Port)</h3>
+          <div class="zh-title">东港城美食水疗会</div>
+          <div class="where">Luohu / Luohu Port · Shenzhen</div>
+          <div class="addr"><div class="zh">罗湖区建设路1001号火车站大厦3-5楼</div><div class="en">3-5F, Shenzhen Railway Station Hotel, 1001 Jianshe Rd, Luohu District</div></div>
+          <div class="links"><a href="https://uri.amap.com/marker?position=114.117724,22.530938&amp;name=Donggang%20City%20Food%20%26%20Spa%20Club%20%28Luohu%20Port%29&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%9C%E6%B8%AF%E5%9F%8E%E7%BE%8E%E9%A3%9F%E6%B0%B4%E7%96%97%E4%BC%9A" target="_blank" rel="noopener">Xiaohongshu</a><a href="https://www.instagram.com/reel/DF41RqbJ7Ym/" target="_blank" rel="noopener">IG</a></div>
+          
+          <p class="notes">IG reel · @ hkfoodcravers · high confidence — 24-hr spa ~100m from Luohu Port, opened Jan 2025; massage, baths, food, free lounge overnight stay.</p>
+          <div class="cost">¥259 pp</div>
+        </article>
+        <article class="card food" data-type="Food" data-lat="" data-lng="" data-search="yun jing 云璟（鹏瑞莱佛士酒店） nanshan shenzhen ask for a window table. poached sunflower-seed chicken; mantis shrimp">
           <div class="meta"><span class="type">Food</span><span class="dist"></span><span class="michelin">2★</span></div>
           <h3>Yun Jing</h3>
           <div class="zh-title">云璟（鹏瑞莱佛士酒店）</div>
           <div class="where">Nanshan · Shenzhen</div>
           <div class="addr"><div class="zh">深圳湾1号T7</div><div class="en">70F Raffles Shenzhen, One Shenzhen Bay T7</div></div>
-          <div class="links"><a href="https://uri.amap.com/marker?position=113.942747,22.506913&amp;name=Yun%20Jing&amp;src=china-trip&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">Amap</a><a href="https://www.dianping.com/shop/128717911" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%91%E7%92%9F%EF%BC%88%E9%B9%8F%E7%91%9E%E8%8E%B1%E4%BD%9B%E5%A3%AB%E9%85%92%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
+          <div class="links"><a href="https://www.dianping.com/shop/128717911" target="_blank" rel="noopener">Dianping</a><a href="https://www.xiaohongshu.com/search_result?keyword=%E4%BA%91%E7%92%9F%EF%BC%88%E9%B9%8F%E7%91%9E%E8%8E%B1%E4%BD%9B%E5%A3%AB%E9%85%92%E5%BA%97%EF%BC%89" target="_blank" rel="noopener">Xiaohongshu</a></div>
           <p class="order"><b>Order:</b> Poached sunflower-seed chicken; mantis shrimp</p>
           <p class="notes">Ask for a window table.</p>
           <div class="cost">Special occasion</div>
