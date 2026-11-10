@@ -25,7 +25,9 @@
   .card.transport { border-left-color:#5560c8; } .card.deadline { border-left-color:#c8393b; }
   .meta { display:flex; gap:8px; align-items:center; font-size:.75rem; color:var(--muted); }
   .type { font-weight:600; text-transform:uppercase; letter-spacing:.05em; }
+  .dist { font-size:.72rem; color:var(--muted); }
   .status { margin-left:auto; border:1px solid var(--line); border-radius:999px; padding:1px 8px; }
+  .near-heading { font-size:.95rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:22px 0 8px; }
   h3 { margin:6px 0 2px; font-size:1.05rem; }
   .zh-title { font-size:1rem; color:var(--muted); }
   .where { font-size:.85rem; color:var(--muted); margin-top:4px; }
@@ -42,13 +44,13 @@
 <body>
 <header>
   <h1>China Trip 2026</h1>
-  <div class="sub">Public recommendations · saved 2026-11-10. Works offline; links need a connection.</div>
+  <div class="sub">Public recommendations · saved 2026-11-10. Tap Near me to sort by distance. Works offline; links need a connection.</div>
   <input class="search" id="q" placeholder="Search places, notes, addresses…">
 </header>
-<div class="filters" id="f"><button class="on" data-filter="">All</button><button data-filter="Event">Event</button><button data-filter="Nearby">Nearby</button><button data-filter="Food">Food</button></div>
-<main id="list"><section class="day"><h2>Shanghai</h2>
-        <article class="card food" data-type="Food" data-search="lucky mart (konbini izakaya) lucky mart 富民路 fumin rd / jing&#x27;an shanghai ">
-          <div class="meta"><span class="type">Food</span></div>
+<div class="filters" id="f"><button class="on" data-filter="">All</button><button data-filter="Event">Event</button><button data-filter="Nearby">Nearby</button><button data-filter="Food">Food</button><button id="near" type="button">Near me</button></div>
+<main id="list"><section id="nearby" hidden><h2 class="near-heading">Nearest first</h2><div id="nearby-list"></div></section><section class="day"><h2>Shanghai</h2>
+        <article class="card food" data-type="Food" data-lat="31.219165" data-lng="121.451272" data-search="lucky mart (konbini izakaya) lucky mart 富民路 fumin rd / jing&#x27;an shanghai ">
+          <div class="meta"><span class="type">Food</span><span class="dist"></span></div>
           <h3>Lucky Mart (konbini izakaya)</h3>
           <div class="zh-title">Lucky Mart 富民路</div>
           <div class="where">Fumin Rd / Jing&#x27;an · Shanghai</div>
@@ -57,8 +59,8 @@
           
           
         </article>
-        <article class="card event" data-type="Event" data-search="ins land (club complex) ins新乐园 fuxing park / huangpu shanghai ">
-          <div class="meta"><span class="type">Event</span></div>
+        <article class="card event" data-type="Event" data-lat="31.216980" data-lng="121.469115" data-search="ins land (club complex) ins新乐园 fuxing park / huangpu shanghai ">
+          <div class="meta"><span class="type">Event</span><span class="dist"></span></div>
           <h3>INS Land (club complex)</h3>
           <div class="zh-title">INS新乐园</div>
           <div class="where">Fuxing Park / Huangpu · Shanghai</div>
@@ -67,8 +69,8 @@
           
           
         </article>
-        <article class="card event" data-type="Event" data-search="argy presents neworld (camelphat, omiki, final request)  jumen rd / huangpu shanghai ">
-          <div class="meta"><span class="type">Event</span></div>
+        <article class="card event" data-type="Event" data-lat="31.196152" data-lng="121.483887" data-search="argy presents neworld (camelphat, omiki, final request)  jumen rd / huangpu shanghai ">
+          <div class="meta"><span class="type">Event</span><span class="dist"></span></div>
           <h3>ARGY presents NEWORLD (CamelPhat, OMIKI, Final Request)</h3>
           <div class="zh-title"></div>
           <div class="where">Jumen Rd / Huangpu · Shanghai</div>
@@ -77,8 +79,8 @@
           
           
         </article>
-        <article class="card nearby" data-type="Nearby" data-search="breadful days market (rockbund) 有有市集 rockbund / huangpu shanghai ">
-          <div class="meta"><span class="type">Nearby</span></div>
+        <article class="card nearby" data-type="Nearby" data-lat="31.231661" data-lng="121.484420" data-search="breadful days market (rockbund) 有有市集 rockbund / huangpu shanghai ">
+          <div class="meta"><span class="type">Nearby</span><span class="dist"></span></div>
           <h3>Breadful Days market (Rockbund)</h3>
           <div class="zh-title">有有市集</div>
           <div class="where">Rockbund / Huangpu · Shanghai</div>
@@ -89,8 +91,11 @@
         </article></section><p class="empty" id="empty" hidden>Nothing matches.</p></main>
 <script>
 const q = document.getElementById('q');
-const buttons = [...document.querySelectorAll('#f button')];
+const buttons = [...document.querySelectorAll('#f button[data-filter]')];
+const nearButton = document.getElementById('near');
 let active = '';
+let nearMode = false;
+
 function apply() {
   const term = q.value.trim().toLowerCase();
   let shown = 0;
@@ -102,16 +107,66 @@ function apply() {
     if (show) shown++;
   });
   document.querySelectorAll('.day').forEach(day => {
-    day.hidden = ![...day.querySelectorAll('.card')].some(c => !c.hidden);
+    day.hidden = nearMode ? true : ![...day.querySelectorAll('.card')].some(c => !c.hidden);
   });
   document.getElementById('empty').hidden = shown > 0;
 }
+
+function distanceKm(lat1, lon1, lat2, lon2) {
+  const rad = value => value * Math.PI / 180;
+  const dLat = rad(lat2 - lat1);
+  const dLon = rad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(a));
+}
+
+function showNearby() {
+  if (!navigator.geolocation) {
+    alert('Location is not available in this browser.');
+    return;
+  }
+  navigator.geolocation.getCurrentPosition(position => {
+    const cards = [...document.querySelectorAll('#list .day .card')];
+    cards.forEach(card => {
+      const lat = parseFloat(card.dataset.lat);
+      const lng = parseFloat(card.dataset.lng);
+      const badge = card.querySelector('.dist');
+      if (Number.isFinite(lat) && Number.isFinite(lng)) {
+        const km = distanceKm(position.coords.latitude, position.coords.longitude, lat, lng);
+        card.dataset.distance = km;
+        if (badge) badge.textContent = km < 1 ? Math.round(km * 1000) + ' m' : km.toFixed(1) + ' km';
+      } else {
+        card.dataset.distance = 999999;
+      }
+    });
+    cards.sort((a, b) => parseFloat(a.dataset.distance) - parseFloat(b.dataset.distance));
+    const list = document.getElementById('nearby-list');
+    list.innerHTML = '';
+    cards.forEach(card => list.appendChild(card.cloneNode(true)));
+    document.getElementById('nearby').hidden = false;
+    document.querySelectorAll('#list .day').forEach(day => day.hidden = true);
+    nearButton.classList.add('on');
+    nearMode = true;
+    apply();
+  }, () => alert('Location permission was denied or unavailable.'));
+}
+
+function hideNearby() {
+  document.getElementById('nearby').hidden = true;
+  document.querySelectorAll('#list .day').forEach(day => day.hidden = false);
+  nearButton.classList.remove('on');
+  nearMode = false;
+  apply();
+}
+
 buttons.forEach(button => button.addEventListener('click', () => {
   buttons.forEach(b => b.classList.remove('on'));
   button.classList.add('on');
   active = button.dataset.filter;
   apply();
 }));
+nearButton.addEventListener('click', () => nearMode ? hideNearby() : showNearby());
 q.addEventListener('input', apply);
 </script>
 </body>
